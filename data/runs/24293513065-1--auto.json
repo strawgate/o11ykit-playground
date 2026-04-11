@@ -1,0 +1,496 @@
+{
+  "resourceMetrics": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "benchkit.source_format",
+            "value": {
+              "stringValue": "go"
+            }
+          },
+          {
+            "key": "benchkit.ref",
+            "value": {
+              "stringValue": "refs/heads/codex/playground-no-cancel-e2e"
+            }
+          },
+          {
+            "key": "benchkit.commit",
+            "value": {
+              "stringValue": "56d974be4b76f83ff0dcaa30893edd80fa7aba39"
+            }
+          },
+          {
+            "key": "benchkit.runner",
+            "value": {
+              "stringValue": "Linux/X64"
+            }
+          }
+        ]
+      },
+      "scopeMetrics": [
+        {
+          "metrics": [
+            {
+              "name": "ns_per_op",
+              "unit": "ns/op",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "680"
+                  },
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "610"
+                  },
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "680"
+                  },
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "610"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "bytes_per_op",
+              "unit": "B/op",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "32"
+                  },
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "24"
+                  },
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "32"
+                  },
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "24"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "allocs_per_op",
+              "unit": "allocs/op",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1"
+                  },
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1"
+                  },
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/map"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1"
+                  },
+                  {
+                    "timeUnixNano": "1775948362924000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkHash/robin"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
