@@ -1,0 +1,39 @@
+{
+  "resourceMetrics": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "benchkit.source_format",
+            "value": {
+              "stringValue": "go"
+            }
+          },
+          {
+            "key": "benchkit.ref",
+            "value": {
+              "stringValue": "refs/heads/codex/playground-no-cancel-e2e"
+            }
+          },
+          {
+            "key": "benchkit.commit",
+            "value": {
+              "stringValue": "56d974be4b76f83ff0dcaa30893edd80fa7aba39"
+            }
+          },
+          {
+            "key": "benchkit.runner",
+            "value": {
+              "stringValue": "Linux/X64"
+            }
+          }
+        ]
+      },
+      "scopeMetrics": [
+        {
+          "metrics": []
+        }
+      ]
+    }
+  ]
+}
