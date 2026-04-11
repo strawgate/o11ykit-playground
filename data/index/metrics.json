@@ -12,9 +12,51 @@
     "latestTimestamp": "2026-04-11T16:21:57.711Z"
   },
   {
+    "metric": "forks",
+    "latestSeriesCount": 1,
+    "latestRunId": "24286555129-1--repo-stats",
+    "latestTimestamp": "2026-04-11T16:22:09.284Z"
+  },
+  {
+    "metric": "lang_bytes_html",
+    "latestSeriesCount": 1,
+    "latestRunId": "24286555129-1--repo-stats",
+    "latestTimestamp": "2026-04-11T16:22:09.284Z"
+  },
+  {
+    "metric": "lang_bytes_typescript",
+    "latestSeriesCount": 1,
+    "latestRunId": "24286555129-1--repo-stats",
+    "latestTimestamp": "2026-04-11T16:22:09.284Z"
+  },
+  {
     "metric": "ns_per_op",
     "latestSeriesCount": 2,
     "latestRunId": "24286552258-1--candidate",
     "latestTimestamp": "2026-04-11T16:21:57.711Z"
+  },
+  {
+    "metric": "open_issues",
+    "latestSeriesCount": 1,
+    "latestRunId": "24286555129-1--repo-stats",
+    "latestTimestamp": "2026-04-11T16:22:09.284Z"
+  },
+  {
+    "metric": "open_prs",
+    "latestSeriesCount": 1,
+    "latestRunId": "24286555129-1--repo-stats",
+    "latestTimestamp": "2026-04-11T16:22:09.284Z"
+  },
+  {
+    "metric": "stars",
+    "latestSeriesCount": 1,
+    "latestRunId": "24286555129-1--repo-stats",
+    "latestTimestamp": "2026-04-11T16:22:09.284Z"
+  },
+  {
+    "metric": "workflow_success_pct",
+    "latestSeriesCount": 1,
+    "latestRunId": "24286555129-1--repo-stats",
+    "latestTimestamp": "2026-04-11T16:22:09.284Z"
   }
 ]

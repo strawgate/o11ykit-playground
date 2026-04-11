@@ -1,6 +1,22 @@
 {
   "runs": [
     {
+      "id": "24286555129-1--repo-stats",
+      "timestamp": "2026-04-11T16:22:09.284Z",
+      "commit": "ecca9cd21b0651343835dad8029be073537c5977",
+      "ref": "refs/heads/main",
+      "benchmarks": 1,
+      "metrics": [
+        "forks",
+        "lang_bytes_html",
+        "lang_bytes_typescript",
+        "open_issues",
+        "open_prs",
+        "stars",
+        "workflow_success_pct"
+      ]
+    },
+    {
       "id": "24286552258-1--candidate",
       "timestamp": "2026-04-11T16:21:57.711Z",
       "commit": "ecca9cd21b0651343835dad8029be073537c5977",
@@ -28,6 +44,13 @@
   "metrics": [
     "allocs_per_op",
     "bytes_per_op",
-    "ns_per_op"
+    "forks",
+    "lang_bytes_html",
+    "lang_bytes_typescript",
+    "ns_per_op",
+    "open_issues",
+    "open_prs",
+    "stars",
+    "workflow_success_pct"
   ]
 }

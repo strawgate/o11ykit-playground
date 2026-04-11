@@ -1,0 +1,17 @@
+{
+  "metric": "workflow_success_pct",
+  "unit": "%",
+  "direction": "bigger_is_better",
+  "series": {
+    "o11ykit-playground": {
+      "points": [
+        {
+          "timestamp": "2026-04-11T16:22:09.284Z",
+          "value": 28.6,
+          "commit": "ecca9cd21b0651343835dad8029be073537c5977",
+          "run_id": "24286555129-1--repo-stats"
+        }
+      ]
+    }
+  }
+}
