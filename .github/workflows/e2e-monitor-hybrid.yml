@@ -87,6 +87,6 @@ jobs:
         run: |
           set -euo pipefail
           git fetch origin bench-data:bench-data
-          EXPECTED="data/telemetry/${{ needs.monitor-capture.outputs.monitor_run_id }}.otlp.jsonl.gz"
+          EXPECTED="data/runs/${{ needs.monitor-capture.outputs.monitor_run_id }}/telemetry.otlp.jsonl.gz"
           echo "Expecting: ${EXPECTED}"
           git ls-tree -r --name-only bench-data | grep -Fx "${EXPECTED}"
