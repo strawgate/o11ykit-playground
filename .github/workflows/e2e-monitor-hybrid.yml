@@ -6,6 +6,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: bench-data-write-serialized
+  cancel-in-progress: false
+
 jobs:
   monitor-capture:
     runs-on: ubuntu-latest

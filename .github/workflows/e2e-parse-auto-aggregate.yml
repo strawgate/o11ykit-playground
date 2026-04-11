@@ -7,6 +7,10 @@ permissions:
   contents: write
   actions: read
 
+concurrency:
+  group: bench-data-write-serialized
+  cancel-in-progress: false
+
 jobs:
   emit-benchmark-logs:
     runs-on: ubuntu-latest
