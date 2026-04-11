@@ -1,0 +1,20 @@
+[
+  {
+    "metric": "allocs_per_op",
+    "latestSeriesCount": 2,
+    "latestRunId": "24286552258-1--candidate",
+    "latestTimestamp": "2026-04-11T16:21:57.711Z"
+  },
+  {
+    "metric": "bytes_per_op",
+    "latestSeriesCount": 2,
+    "latestRunId": "24286552258-1--candidate",
+    "latestTimestamp": "2026-04-11T16:21:57.711Z"
+  },
+  {
+    "metric": "ns_per_op",
+    "latestSeriesCount": 2,
+    "latestRunId": "24286552258-1--candidate",
+    "latestTimestamp": "2026-04-11T16:21:57.711Z"
+  }
+]

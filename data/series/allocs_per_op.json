@@ -1,0 +1,45 @@
+{
+  "metric": "allocs_per_op",
+  "unit": "allocs/op",
+  "direction": "smaller_is_better",
+  "series": {
+    "BenchmarkSort/quick [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-11T16:21:55.909Z",
+          "value": 2,
+          "commit": "ecca9cd21b0651343835dad8029be073537c5977",
+          "run_id": "24286552258-1--baseline"
+        },
+        {
+          "timestamp": "2026-04-11T16:21:57.711Z",
+          "value": 2,
+          "commit": "ecca9cd21b0651343835dad8029be073537c5977",
+          "run_id": "24286552258-1--candidate"
+        }
+      ]
+    },
+    "BenchmarkSort/merge [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-11T16:21:55.909Z",
+          "value": 3,
+          "commit": "ecca9cd21b0651343835dad8029be073537c5977",
+          "run_id": "24286552258-1--baseline"
+        },
+        {
+          "timestamp": "2026-04-11T16:21:57.711Z",
+          "value": 3,
+          "commit": "ecca9cd21b0651343835dad8029be073537c5977",
+          "run_id": "24286552258-1--candidate"
+        }
+      ]
+    }
+  }
+}

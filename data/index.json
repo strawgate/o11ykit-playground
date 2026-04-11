@@ -1,0 +1,33 @@
+{
+  "runs": [
+    {
+      "id": "24286552258-1--candidate",
+      "timestamp": "2026-04-11T16:21:57.711Z",
+      "commit": "ecca9cd21b0651343835dad8029be073537c5977",
+      "ref": "refs/heads/main",
+      "benchmarks": 2,
+      "metrics": [
+        "allocs_per_op",
+        "bytes_per_op",
+        "ns_per_op"
+      ]
+    },
+    {
+      "id": "24286552258-1--baseline",
+      "timestamp": "2026-04-11T16:21:55.909Z",
+      "commit": "ecca9cd21b0651343835dad8029be073537c5977",
+      "ref": "refs/heads/main",
+      "benchmarks": 2,
+      "metrics": [
+        "allocs_per_op",
+        "bytes_per_op",
+        "ns_per_op"
+      ]
+    }
+  ],
+  "metrics": [
+    "allocs_per_op",
+    "bytes_per_op",
+    "ns_per_op"
+  ]
+}
