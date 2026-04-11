@@ -7,10 +7,6 @@ permissions:
   contents: write
   actions: read
 
-concurrency:
-  group: bench-data-writes
-  cancel-in-progress: false
-
 jobs:
   parse-aggregate-compare:
     runs-on: ubuntu-latest
