@@ -2,7 +2,7 @@
   "runs": [
     {
       "id": "bench-24286863245-1--monitor",
-      "timestamp": "2026-04-11T17:29:23.501Z",
+      "timestamp": "2026-04-11T17:30:02.627Z",
       "commit": "ecca9cd21b0651343835dad8029be073537c5977",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -10,11 +10,23 @@
     },
     {
       "id": "24287668602-1--auto",
-      "timestamp": "2026-04-11T17:29:23.501Z",
+      "timestamp": "2026-04-11T17:30:02.626Z",
       "commit": "9175c59ffa938d7bfba47f9bc7e9a2156279422b",
       "ref": "refs/heads/main",
       "benchmarks": 0,
       "metrics": []
+    },
+    {
+      "id": "24287752982-1--auto",
+      "timestamp": "2026-04-11T17:30:01.334Z",
+      "commit": "7ca27a9d392c8a483f560f0346c1b5b8ec2d5eca",
+      "ref": "refs/heads/main",
+      "benchmarks": 2,
+      "metrics": [
+        "allocs_per_op",
+        "bytes_per_op",
+        "ns_per_op"
+      ]
     },
     {
       "id": "24287745624-1--candidate",
