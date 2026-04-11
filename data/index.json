@@ -2,8 +2,16 @@
   "runs": [
     {
       "id": "bench-24286863245-1--monitor",
-      "timestamp": "2026-04-11T16:39:57.469Z",
+      "timestamp": "2026-04-11T17:25:15.845Z",
       "commit": "ecca9cd21b0651343835dad8029be073537c5977",
+      "ref": "refs/heads/main",
+      "benchmarks": 0,
+      "metrics": []
+    },
+    {
+      "id": "24287668602-1--auto",
+      "timestamp": "2026-04-11T17:25:15.845Z",
+      "commit": "9175c59ffa938d7bfba47f9bc7e9a2156279422b",
       "ref": "refs/heads/main",
       "benchmarks": 0,
       "metrics": []
