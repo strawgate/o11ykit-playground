@@ -109,6 +109,18 @@
           "value": 1550,
           "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
           "run_id": "24293433455-1--candidate"
+        },
+        {
+          "timestamp": "2026-04-11T22:55:39.331Z",
+          "value": 1100,
+          "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
+          "run_id": "24293461197-1--baseline"
+        },
+        {
+          "timestamp": "2026-04-11T22:55:40.555Z",
+          "value": 1550,
+          "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
+          "run_id": "24293461197-1--candidate"
         }
       ]
     },
@@ -218,6 +230,18 @@
           "value": 1800,
           "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
           "run_id": "24293433455-1--candidate"
+        },
+        {
+          "timestamp": "2026-04-11T22:55:39.331Z",
+          "value": 1300,
+          "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
+          "run_id": "24293461197-1--baseline"
+        },
+        {
+          "timestamp": "2026-04-11T22:55:40.555Z",
+          "value": 1800,
+          "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
+          "run_id": "24293461197-1--candidate"
         }
       ]
     },
