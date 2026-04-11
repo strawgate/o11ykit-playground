@@ -1,9 +1,9 @@
 [
   {
     "ref": "refs/heads/main",
-    "latestRunId": "24286555129-1--repo-stats",
-    "latestTimestamp": "2026-04-11T16:22:09.284Z",
+    "latestRunId": "bench-24286863245-1--monitor",
+    "latestTimestamp": "2026-04-11T16:39:57.469Z",
     "latestCommit": "ecca9cd21b0651343835dad8029be073537c5977",
-    "runCount": 3
+    "runCount": 4
   }
 ]
