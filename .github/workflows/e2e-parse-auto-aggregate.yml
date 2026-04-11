@@ -12,12 +12,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  parse-auto:
+  emit-benchmark-logs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Emit benchmark output to logs
         run: |
           cat <<'BENCH'
@@ -27,6 +24,13 @@ jobs:
           BenchmarkHash/map-8       2000000  680 ns/op   32 B/op  1 allocs/op
           BenchmarkHash/robin-8     2000000  610 ns/op   24 B/op  1 allocs/op
           BENCH
+
+  parse-auto:
+    runs-on: ubuntu-latest
+    needs: emit-benchmark-logs
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Parse from workflow logs (auto)
         id: parse
