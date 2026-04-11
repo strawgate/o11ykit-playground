@@ -40,6 +40,34 @@
           "run_id": "24286552258-1--candidate"
         }
       ]
+    },
+    "BenchmarkHash/map [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-11T17:27:56.051Z",
+          "value": 32,
+          "commit": "9175c59ffa938d7bfba47f9bc7e9a2156279422b",
+          "run_id": "24287716317-1--auto",
+          "range": 0
+        }
+      ]
+    },
+    "BenchmarkHash/robin [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-11T17:27:56.051Z",
+          "value": 24,
+          "commit": "9175c59ffa938d7bfba47f9bc7e9a2156279422b",
+          "run_id": "24287716317-1--auto",
+          "range": 0
+        }
+      ]
     }
   }
 }

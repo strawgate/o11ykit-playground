@@ -2,7 +2,7 @@
   "runs": [
     {
       "id": "bench-24286863245-1--monitor",
-      "timestamp": "2026-04-11T17:25:15.845Z",
+      "timestamp": "2026-04-11T17:27:57.066Z",
       "commit": "ecca9cd21b0651343835dad8029be073537c5977",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -10,11 +10,23 @@
     },
     {
       "id": "24287668602-1--auto",
-      "timestamp": "2026-04-11T17:25:15.845Z",
+      "timestamp": "2026-04-11T17:27:57.065Z",
       "commit": "9175c59ffa938d7bfba47f9bc7e9a2156279422b",
       "ref": "refs/heads/main",
       "benchmarks": 0,
       "metrics": []
+    },
+    {
+      "id": "24287716317-1--auto",
+      "timestamp": "2026-04-11T17:27:56.051Z",
+      "commit": "9175c59ffa938d7bfba47f9bc7e9a2156279422b",
+      "ref": "refs/heads/main",
+      "benchmarks": 2,
+      "metrics": [
+        "allocs_per_op",
+        "bytes_per_op",
+        "ns_per_op"
+      ]
     },
     {
       "id": "24286555129-1--repo-stats",
