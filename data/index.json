@@ -1,8 +1,16 @@
 {
   "runs": [
     {
+      "id": "bench-24293325030-1--monitor",
+      "timestamp": "2026-04-11T22:47:07.086Z",
+      "commit": "09b95b07e9e8ae07fbc1ebf1e7b04ed90c53907f",
+      "ref": "refs/heads/codex/playground-no-cancel-e2e",
+      "benchmarks": 0,
+      "metrics": []
+    },
+    {
       "id": "bench-24291900017-1--monitor",
-      "timestamp": "2026-04-11T21:23:25.299Z",
+      "timestamp": "2026-04-11T22:47:07.085Z",
       "commit": "c0e6d8b65285ebb2187a08813ec901daf0e32d7a",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -10,7 +18,7 @@
     },
     {
       "id": "bench-24291861094-1--monitor",
-      "timestamp": "2026-04-11T21:23:25.299Z",
+      "timestamp": "2026-04-11T22:47:07.085Z",
       "commit": "06af35fad930c179ccad05ec8a58686ed7d19f9a",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -18,7 +26,7 @@
     },
     {
       "id": "bench-24291818442-1--monitor",
-      "timestamp": "2026-04-11T21:23:25.299Z",
+      "timestamp": "2026-04-11T22:47:07.085Z",
       "commit": "77425d344e7b329539ef1417ebd4234bed227c9a",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -26,7 +34,7 @@
     },
     {
       "id": "bench-24291397788-1--monitor",
-      "timestamp": "2026-04-11T21:23:25.299Z",
+      "timestamp": "2026-04-11T22:47:07.085Z",
       "commit": "77425d344e7b329539ef1417ebd4234bed227c9a",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -34,7 +42,7 @@
     },
     {
       "id": "bench-24287762557-1--monitor",
-      "timestamp": "2026-04-11T21:23:25.299Z",
+      "timestamp": "2026-04-11T22:47:07.085Z",
       "commit": "7ca27a9d392c8a483f560f0346c1b5b8ec2d5eca",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -42,7 +50,7 @@
     },
     {
       "id": "bench-24286863245-1--monitor",
-      "timestamp": "2026-04-11T21:23:25.299Z",
+      "timestamp": "2026-04-11T22:47:07.085Z",
       "commit": "ecca9cd21b0651343835dad8029be073537c5977",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -50,7 +58,7 @@
     },
     {
       "id": "24287668602-1--auto",
-      "timestamp": "2026-04-11T21:23:25.297Z",
+      "timestamp": "2026-04-11T22:47:07.084Z",
       "commit": "9175c59ffa938d7bfba47f9bc7e9a2156279422b",
       "ref": "refs/heads/main",
       "benchmarks": 0,
