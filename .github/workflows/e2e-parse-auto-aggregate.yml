@@ -1,0 +1,48 @@
+name: e2e-parse-auto-aggregate
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: bench-data-writes
+  cancel-in-progress: false
+
+jobs:
+  parse-auto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Emit benchmark output to logs
+        run: |
+          cat <<'BENCH'
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkHash/map-8       2000000  680 ns/op   32 B/op  1 allocs/op
+          BenchmarkHash/robin-8     2000000  610 ns/op   24 B/op  1 allocs/op
+          BENCH
+
+      - name: Parse from workflow logs (auto)
+        id: parse
+        uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
+        with:
+          mode: auto
+          format: go
+          run-id: ${{ github.run_id }}-${{ github.run_attempt }}--auto
+          github-token: ${{ github.token }}
+
+      - name: Assert source mode
+        run: |
+          echo "source=${{ steps.parse.outputs.source }}"
+          test "${{ steps.parse.outputs.source }}" = "auto"
+
+      - name: Aggregate
+        uses: strawgate/o11ykit/octo11y/actions/aggregate@main-dist
+        with:
+          github-token: ${{ github.token }}

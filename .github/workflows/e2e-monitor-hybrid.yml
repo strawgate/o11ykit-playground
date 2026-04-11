@@ -1,0 +1,92 @@
+name: e2e-monitor-hybrid
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bench-data-writes
+  cancel-in-progress: false
+
+jobs:
+  monitor-capture:
+    runs-on: ubuntu-latest
+    outputs:
+      monitor_run_id: ${{ steps.ids.outputs.monitor_run_id }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compute run ids
+        id: ids
+        run: |
+          echo "monitor_run_id=monitor-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_OUTPUT"
+          echo "bench_run_id=bench-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}--monitor" >> "$GITHUB_OUTPUT"
+
+      - name: Start monitor
+        id: monitor
+        uses: strawgate/o11ykit/octo11y/actions/monitor@main-dist
+        with:
+          scrape-interval: 2s
+          metric-sets: cpu,memory,load,process
+          run-id: ${{ steps.ids.outputs.monitor_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Emit custom metric
+        uses: strawgate/o11ykit/octo11y/actions/emit-metric@main-dist
+        with:
+          otlp-http-endpoint: ${{ steps.monitor.outputs.otlp-http-endpoint }}
+          name: setup_latency_ms
+          value: 42
+          unit: ms
+          scenario: monitor-e2e
+          series: baseline
+
+      - name: Run workload and capture benchmark file
+        run: |
+          python - <<'PY'
+          total = 0
+          for i in range(4_000_000):
+              total += i % 7
+          print("workload checksum", total)
+          PY
+
+          cat > bench.txt <<'BENCH'
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkMonitor/path-a-8   1000000  2200 ns/op  96 B/op  3 allocs/op
+          BENCH
+
+      - name: Stash benchmark file
+        uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
+        with:
+          mode: file
+          results: bench.txt
+          format: go
+          run-id: ${{ steps.ids.outputs.bench_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Aggregate
+        uses: strawgate/o11ykit/octo11y/actions/aggregate@main-dist
+        with:
+          github-token: ${{ github.token }}
+
+  verify-telemetry-sidecar:
+    runs-on: ubuntu-latest
+    needs: monitor-capture
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify monitor sidecar exists on bench-data
+        run: |
+          set -euo pipefail
+          git fetch origin bench-data:bench-data
+          EXPECTED="data/telemetry/${{ needs.monitor-capture.outputs.monitor_run_id }}.otlp.jsonl.gz"
+          echo "Expecting: ${EXPECTED}"
+          git ls-tree -r --name-only bench-data | grep -Fx "${EXPECTED}"

@@ -1,0 +1,43 @@
+name: e2e-repo-stats
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+  issues: read
+  pull-requests: read
+
+concurrency:
+  group: bench-data-writes
+  cancel-in-progress: false
+
+jobs:
+  repo-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Collect repository stats
+        id: stats
+        uses: strawgate/o11ykit/octo11y/actions/repo-stats@main-dist
+        with:
+          github-token: ${{ github.token }}
+          metrics: stars,forks,open-issues,open-prs,workflow-success-pct,languages
+          scenario: o11ykit-playground
+
+      - name: Stash repo stats OTLP
+        uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
+        with:
+          mode: file
+          results: ${{ steps.stats.outputs.results-file }}
+          format: otlp
+          run-id: ${{ github.run_id }}-${{ github.run_attempt }}--repo-stats
+          github-token: ${{ github.token }}
+
+      - name: Aggregate
+        uses: strawgate/o11ykit/octo11y/actions/aggregate@main-dist
+        with:
+          github-token: ${{ github.token }}

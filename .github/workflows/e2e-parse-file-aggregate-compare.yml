@@ -1,0 +1,82 @@
+name: e2e-parse-file-aggregate-compare
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: bench-data-writes
+  cancel-in-progress: false
+
+jobs:
+  parse-aggregate-compare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Write baseline benchmark file
+        run: |
+          cat > baseline.txt <<'BENCH'
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkSort/quick-8      1000000  1100 ns/op  64 B/op  2 allocs/op
+          BenchmarkSort/merge-8      1000000  1300 ns/op  80 B/op  3 allocs/op
+          BENCH
+
+      - name: Stash baseline
+        uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
+        with:
+          mode: file
+          results: baseline.txt
+          format: go
+          run-id: ${{ github.run_id }}-${{ github.run_attempt }}--baseline
+          github-token: ${{ github.token }}
+
+      - name: Write candidate benchmark file
+        run: |
+          cat > candidate.txt <<'BENCH'
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkSort/quick-8      1000000  1550 ns/op  64 B/op  2 allocs/op
+          BenchmarkSort/merge-8      1000000  1800 ns/op  80 B/op  3 allocs/op
+          BENCH
+
+      - name: Compare candidate against baseline
+        id: compare
+        uses: strawgate/o11ykit/octo11y/actions/compare@main-dist
+        with:
+          results: candidate.txt
+          format: go
+          baseline-runs: 1
+          threshold: 5
+          fail-on-regression: false
+          comment-on-pr: false
+          github-token: ${{ github.token }}
+
+      - name: Assert regression was detected
+        run: |
+          echo "has-regression=${{ steps.compare.outputs.has-regression }}"
+          if [ "${{ steps.compare.outputs.has-regression }}" != "true" ]; then
+            echo "Expected regression detection to be true"
+            exit 1
+          fi
+
+      - name: Stash candidate
+        uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
+        with:
+          mode: file
+          results: candidate.txt
+          format: go
+          run-id: ${{ github.run_id }}-${{ github.run_attempt }}--candidate
+          github-token: ${{ github.token }}
+
+      - name: Aggregate
+        uses: strawgate/o11ykit/octo11y/actions/aggregate@main-dist
+        with:
+          github-token: ${{ github.token }}
