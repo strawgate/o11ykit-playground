@@ -1,16 +1,16 @@
 [
   {
-    "ref": "refs/heads/main",
-    "latestRunId": "bench-24291818442-1--monitor",
-    "latestTimestamp": "2026-04-11T21:20:41.389Z",
-    "latestCommit": "77425d344e7b329539ef1417ebd4234bed227c9a",
-    "runCount": 25
+    "ref": "refs/heads/codex/playground-no-cancel-e2e",
+    "latestRunId": "bench-24291861094-1--monitor",
+    "latestTimestamp": "2026-04-11T21:20:45.938Z",
+    "latestCommit": "06af35fad930c179ccad05ec8a58686ed7d19f9a",
+    "runCount": 2
   },
   {
-    "ref": "refs/heads/codex/playground-no-cancel-e2e",
-    "latestRunId": "24291861090-1--repo-stats",
-    "latestTimestamp": "2026-04-11T21:20:40.036Z",
-    "latestCommit": "06af35fad930c179ccad05ec8a58686ed7d19f9a",
-    "runCount": 1
+    "ref": "refs/heads/main",
+    "latestRunId": "bench-24291818442-1--monitor",
+    "latestTimestamp": "2026-04-11T21:20:45.938Z",
+    "latestCommit": "77425d344e7b329539ef1417ebd4234bed227c9a",
+    "runCount": 25
   }
 ]
