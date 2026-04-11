@@ -32,27 +32,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Probe current-run logs APIs
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          echo "GITHUB_REPOSITORY=${GITHUB_REPOSITORY}"
-          echo "GITHUB_RUN_ID=${GITHUB_RUN_ID}"
-          echo "GITHUB_RUN_ATTEMPT=${GITHUB_RUN_ATTEMPT}"
-          echo "GITHUB_JOB=${GITHUB_JOB}"
-
-          gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/jobs?per_page=100" \
-            --jq '.jobs[] | [.id,.name,.status,.conclusion] | @tsv'
-
-          JOB_ID="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/jobs?per_page=100" \
-            --jq ".jobs[] | select(.name==\"${GITHUB_JOB}\") | .id" | head -n1 || true)"
-          echo "resolved_job_id=${JOB_ID:-<none>}"
-
-          if [ -n "${JOB_ID}" ]; then
-            gh api -i "repos/${GITHUB_REPOSITORY}/actions/jobs/${JOB_ID}/logs" | head -n1
-          fi
-
       - name: Parse from workflow logs (auto)
         id: parse
         uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
