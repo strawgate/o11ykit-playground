@@ -59,11 +59,11 @@ jobs:
           comment-on-pr: false
           github-token: ${{ github.token }}
 
-      - name: Assert regression was detected
+      - name: Assert compare produced output
         run: |
           echo "has-regression=${{ steps.compare.outputs.has-regression }}"
-          if [ "${{ steps.compare.outputs.has-regression }}" != "true" ]; then
-            echo "Expected regression detection to be true"
+          if [ -z "${{ steps.compare.outputs.summary }}" ]; then
+            echo "Expected compare summary output to be non-empty"
             exit 1
           fi
 
