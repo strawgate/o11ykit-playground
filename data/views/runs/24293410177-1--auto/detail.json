@@ -1,0 +1,145 @@
+{
+  "run": {
+    "id": "24293410177-1--auto",
+    "timestamp": "2026-04-11T22:52:47.326Z",
+    "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
+    "ref": "refs/heads/codex/playground-no-cancel-e2e",
+    "benchmarks": 2,
+    "metrics": [
+      "allocs_per_op",
+      "bytes_per_op",
+      "ns_per_op"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "allocs_per_op",
+      "unit": "allocs/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkHash/map [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkHash/robin [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkHash/map [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkHash/robin [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "bytes_per_op",
+      "unit": "B/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkHash/map [procs=8]",
+          "value": 32,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkHash/robin [procs=8]",
+          "value": 24,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkHash/map [procs=8]",
+          "value": 32,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkHash/robin [procs=8]",
+          "value": 24,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "ns_per_op",
+      "unit": "ns/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkHash/map [procs=8]",
+          "value": 680,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkHash/robin [procs=8]",
+          "value": 610,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkHash/map [procs=8]",
+          "value": 680,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkHash/robin [procs=8]",
+          "value": 610,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    }
+  ]
+}

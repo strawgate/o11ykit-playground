@@ -2,14 +2,14 @@
   {
     "metric": "allocs_per_op",
     "latestSeriesCount": 4,
-    "latestRunId": "24293376306-1--auto",
-    "latestTimestamp": "2026-04-11T22:50:38.915Z"
+    "latestRunId": "24293410177-1--auto",
+    "latestTimestamp": "2026-04-11T22:52:47.326Z"
   },
   {
     "metric": "bytes_per_op",
     "latestSeriesCount": 4,
-    "latestRunId": "24293376306-1--auto",
-    "latestTimestamp": "2026-04-11T22:50:38.915Z"
+    "latestRunId": "24293410177-1--auto",
+    "latestTimestamp": "2026-04-11T22:52:47.326Z"
   },
   {
     "metric": "forks",
@@ -32,8 +32,8 @@
   {
     "metric": "ns_per_op",
     "latestSeriesCount": 4,
-    "latestRunId": "24293376306-1--auto",
-    "latestTimestamp": "2026-04-11T22:50:38.915Z"
+    "latestRunId": "24293410177-1--auto",
+    "latestTimestamp": "2026-04-11T22:52:47.326Z"
   },
   {
     "metric": "open_issues",
