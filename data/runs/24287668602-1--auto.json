@@ -1,0 +1,39 @@
+{
+  "resourceMetrics": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "benchkit.source_format",
+            "value": {
+              "stringValue": "go"
+            }
+          },
+          {
+            "key": "benchkit.ref",
+            "value": {
+              "stringValue": "refs/heads/main"
+            }
+          },
+          {
+            "key": "benchkit.commit",
+            "value": {
+              "stringValue": "9175c59ffa938d7bfba47f9bc7e9a2156279422b"
+            }
+          },
+          {
+            "key": "benchkit.runner",
+            "value": {
+              "stringValue": "Linux/X64"
+            }
+          }
+        ]
+      },
+      "scopeMetrics": [
+        {
+          "metrics": []
+        }
+      ]
+    }
+  ]
+}
