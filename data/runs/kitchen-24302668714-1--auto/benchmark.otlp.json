@@ -1,0 +1,1792 @@
+{
+  "resourceMetrics": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "benchkit.source_format",
+            "value": {
+              "stringValue": "go"
+            }
+          },
+          {
+            "key": "benchkit.ref",
+            "value": {
+              "stringValue": "refs/heads/main"
+            }
+          },
+          {
+            "key": "benchkit.commit",
+            "value": {
+              "stringValue": "7c117e34f883510abd777e1c00fe912b43178885"
+            }
+          },
+          {
+            "key": "benchkit.runner",
+            "value": {
+              "stringValue": "Linux/X64"
+            }
+          }
+        ]
+      },
+      "scopeMetrics": [
+        {
+          "metrics": [
+            {
+              "name": "ns_per_op",
+              "unit": "ns/op",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "702"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1820"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "702"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1820"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "680"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "990"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "680"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "990"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "680"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "990"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "680"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "990"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "680"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "990"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "680"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "990"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "bytes_per_op",
+              "unit": "B/op",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "40"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "96"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "40"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "96"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "24"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "48"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "24"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "48"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "24"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "48"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "24"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "48"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "24"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "48"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "24"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "48"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "allocs_per_op",
+              "unit": "allocs/op",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "2"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "4"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-parse"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "2"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/log-render"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "4"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "2"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "2"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "2"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "2"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "2"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-core"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "1"
+                  },
+                  {
+                    "timeUnixNano": "1775983252622000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkKitchen/go-io"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
