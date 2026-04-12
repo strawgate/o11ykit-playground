@@ -1,0 +1,172 @@
+{
+  "resourceMetrics": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "benchkit.source_format",
+            "value": {
+              "stringValue": "go"
+            }
+          },
+          {
+            "key": "benchkit.ref",
+            "value": {
+              "stringValue": "refs/heads/main"
+            }
+          },
+          {
+            "key": "benchkit.commit",
+            "value": {
+              "stringValue": "f9f770e51aa279e61e248ecf0329b5ca23194bfa"
+            }
+          },
+          {
+            "key": "benchkit.runner",
+            "value": {
+              "stringValue": "Linux/X64"
+            }
+          }
+        ]
+      },
+      "scopeMetrics": [
+        {
+          "metrics": [
+            {
+              "name": "ns_per_op",
+              "unit": "ns/op",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775983604158000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkBurst/shard-4"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkBurst/shard-4"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "708"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "bytes_per_op",
+              "unit": "B/op",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775983604158000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkBurst/shard-4"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkBurst/shard-4"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "32"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "allocs_per_op",
+              "unit": "allocs/op",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775983604158000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "BenchmarkBurst/shard-4"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "BenchmarkBurst/shard-4"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      },
+                      {
+                        "key": "procs",
+                        "value": {
+                          "stringValue": "8"
+                        }
+                      }
+                    ],
+                    "asInt": "2"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
