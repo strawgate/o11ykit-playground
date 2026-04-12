@@ -398,6 +398,13 @@
           "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
           "run_id": "24293513065-1--auto",
           "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:51:48.349Z",
+          "value": 680,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "24302856669-1--auto",
+          "range": 0
         }
       ]
     },
@@ -481,6 +488,13 @@
           "value": 610,
           "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
           "run_id": "24293513065-1--auto",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:51:48.349Z",
+          "value": 610,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "24302856669-1--auto",
           "range": 0
         }
       ]
