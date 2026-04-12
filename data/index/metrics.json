@@ -2,14 +2,14 @@
   {
     "metric": "allocs_per_op",
     "latestSeriesCount": 25,
-    "latestRunId": "canary-24302828573-1--candidate",
-    "latestTimestamp": "2026-04-12T08:50:30.799Z"
+    "latestRunId": "24302851956-1--candidate",
+    "latestTimestamp": "2026-04-12T08:51:14.515Z"
   },
   {
     "metric": "bytes_per_op",
     "latestSeriesCount": 25,
-    "latestRunId": "canary-24302828573-1--candidate",
-    "latestTimestamp": "2026-04-12T08:50:30.799Z"
+    "latestRunId": "24302851956-1--candidate",
+    "latestTimestamp": "2026-04-12T08:51:14.515Z"
   },
   {
     "metric": "fallback_file_metric",
@@ -80,8 +80,8 @@
   {
     "metric": "ns_per_op",
     "latestSeriesCount": 25,
-    "latestRunId": "canary-24302828573-1--candidate",
-    "latestTimestamp": "2026-04-12T08:50:30.799Z"
+    "latestRunId": "24302851956-1--candidate",
+    "latestTimestamp": "2026-04-12T08:51:14.515Z"
   },
   {
     "metric": "open_issues",
