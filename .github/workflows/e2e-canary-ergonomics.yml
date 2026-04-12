@@ -1,0 +1,255 @@
+name: e2e-canary-ergonomics
+
+on:
+  workflow_dispatch:
+    inputs:
+      o11ykit-ref:
+        description: "Ref from strawgate/o11ykit to test (branch, tag, or SHA)"
+        required: false
+        default: "codex/issue-38-metrics-dir"
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: bench-data-write-serialized
+  cancel-in-progress: false
+
+jobs:
+  canary-full-stack:
+    runs-on: ubuntu-latest
+    outputs:
+      monitor_run_id: ${{ steps.ids.outputs.monitor_run_id }}
+      baseline_run_id: ${{ steps.ids.outputs.baseline_run_id }}
+      auto_run_id: ${{ steps.ids.outputs.auto_run_id }}
+      candidate_run_id: ${{ steps.ids.outputs.candidate_run_id }}
+      metrics_only_run_id: ${{ steps.ids.outputs.metrics_only_run_id }}
+    steps:
+      - name: Checkout playground
+        uses: actions/checkout@v4
+
+      - name: Checkout o11ykit canary ref
+        uses: actions/checkout@v4
+        with:
+          repository: strawgate/o11ykit
+          ref: ${{ inputs.o11ykit-ref }}
+          path: .o11ykit
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Build local canary actions
+        working-directory: .o11ykit/octo11y
+        run: |
+          npm ci
+          npm run build -w packages/core
+          npm run build -w packages/format
+          npm run build -w actions/actions-common
+          npm run build -w actions/monitor
+          npm run build -w actions/stash
+          npm run build -w actions/parse-results
+          npm run build -w actions/compare
+          npm run build -w actions/aggregate
+
+      - name: Compute deterministic run ids
+        id: ids
+        run: |
+          PREFIX="canary-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          echo "monitor_run_id=${PREFIX}--monitor" >> "$GITHUB_OUTPUT"
+          echo "baseline_run_id=${PREFIX}--baseline" >> "$GITHUB_OUTPUT"
+          echo "auto_run_id=${PREFIX}--auto" >> "$GITHUB_OUTPUT"
+          echo "candidate_run_id=${PREFIX}--candidate" >> "$GITHUB_OUTPUT"
+          echo "metrics_only_run_id=${PREFIX}--metrics-only" >> "$GITHUB_OUTPUT"
+
+      - name: Start monitor
+        id: monitor
+        uses: ./.o11ykit/octo11y/actions/monitor
+        with:
+          scrape-interval: 2s
+          metric-sets: cpu,memory,load,process
+          run-id: ${{ steps.ids.outputs.monitor_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Emit custom metrics over HTTP endpoint
+        run: |
+          benchkit-emit --name setup_latency_ms --value 44 --unit ms \
+            --scenario canary-flow --series baseline --direction down \
+            --attribute phase=setup --resource-attribute pipeline=canary
+
+          benchkit-emit --name throughput_ops_per_s --value 8123 --unit ops/s \
+            --scenario canary-flow --series baseline --direction up \
+            --attribute phase=steady-state --resource-attribute flavor=http
+
+      - name: Emit custom metric with file fallback mode
+        run: |
+          BENCHKIT_EMIT_ENDPOINT='' benchkit-emit \
+            --name fallback_file_metric \
+            --value 11 \
+            --unit score \
+            --scenario canary-flow \
+            --series fallback \
+            --direction up \
+            --output "${BENCHKIT_METRICS_DIR}" \
+            --attribute emit_mode=file
+
+      - name: Write baseline benchmark files (multi-file parse)
+        run: |
+          cat > baseline-a.txt <<'BENCH'
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkParser/json-small-8    2000000  700 ns/op   32 B/op  1 allocs/op
+          BenchmarkParser/json-large-8    1500000  930 ns/op   64 B/op  2 allocs/op
+          BENCH
+
+          cat > baseline-b.txt <<'BENCH'
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkParser/msgpack-8       1700000  620 ns/op   24 B/op  1 allocs/op
+          BENCH
+
+      - name: Stash baseline (results + metrics-dir)
+        uses: ./.o11ykit/octo11y/actions/stash
+        with:
+          results: baseline-*.txt
+          format: go
+          metrics-dir: ${{ steps.monitor.outputs.metrics-dir }}
+          run-id: ${{ steps.ids.outputs.baseline_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Emit timestamp-prefixed benchmark logs for auto mode
+        run: |
+          echo "2026-04-12T00:00:00.000Z goos: linux"
+          echo "2026-04-12T00:00:00.001Z goarch: amd64"
+          echo "2026-04-12T00:00:00.002Z cpu: synthetic"
+          echo "2026-04-12T00:00:00.003Z BenchmarkAuto/alpha-8    2000000  510 ns/op  16 B/op  1 allocs/op"
+          echo "2026-04-12T00:00:00.004Z BenchmarkAuto/beta-8     2000000  560 ns/op  16 B/op  1 allocs/op"
+
+      - name: Parse auto from workflow logs
+        id: parse_auto
+        uses: ./.o11ykit/octo11y/actions/parse-results
+        with:
+          mode: auto
+          format: auto
+          run-id: ${{ steps.ids.outputs.auto_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Assert parse auto source mode
+        run: |
+          echo "source=${{ steps.parse_auto.outputs.source }}"
+          test "${{ steps.parse_auto.outputs.source }}" = "auto"
+
+      - name: Write candidate benchmark file
+        run: |
+          cat > candidate.txt <<'BENCH'
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkParser/json-small-8    2000000  880 ns/op   32 B/op  1 allocs/op
+          BenchmarkParser/json-large-8    1500000  1210 ns/op  64 B/op  2 allocs/op
+          BenchmarkParser/msgpack-8       1700000  660 ns/op   24 B/op  1 allocs/op
+          BENCH
+
+      - name: Compare candidate against latest baseline
+        id: compare
+        uses: ./.o11ykit/octo11y/actions/compare
+        with:
+          results: candidate.txt
+          format: go
+          baseline-runs: 1
+          threshold: 5
+          fail-on-regression: false
+          comment-on-pr: false
+          github-token: ${{ github.token }}
+
+      - name: Assert compare generated summary
+        run: |
+          echo "has-regression=${{ steps.compare.outputs.has-regression }}"
+          if [ -z "${{ steps.compare.outputs.summary }}" ]; then
+            echo "compare summary output was empty"
+            exit 1
+          fi
+
+      - name: Stash candidate (results + metrics-dir)
+        uses: ./.o11ykit/octo11y/actions/stash
+        with:
+          results: candidate.txt
+          format: go
+          metrics-dir: ${{ steps.monitor.outputs.metrics-dir }}
+          run-id: ${{ steps.ids.outputs.candidate_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Metrics-only stash flow
+        run: |
+          BENCHKIT_EMIT_ENDPOINT='' benchkit-emit \
+            --name metrics_only_counter \
+            --value 3 \
+            --unit count \
+            --scenario metrics-only \
+            --series standalone \
+            --direction up \
+            --output "${BENCHKIT_METRICS_DIR}" \
+            --attribute mode=metrics-only
+
+      - name: Stash metrics-only document
+        uses: ./.o11ykit/octo11y/actions/stash
+        with:
+          metrics-dir: ${{ steps.monitor.outputs.metrics-dir }}
+          run-id: ${{ steps.ids.outputs.metrics_only_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Aggregate all canary runs
+        uses: ./.o11ykit/octo11y/actions/aggregate
+        with:
+          github-token: ${{ github.token }}
+
+  verify-canary-artifacts:
+    runs-on: ubuntu-latest
+    needs: canary-full-stack
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout playground
+        uses: actions/checkout@v4
+
+      - name: Verify bench-data artifacts from canary run
+        env:
+          MONITOR_RUN_ID: ${{ needs.canary-full-stack.outputs.monitor_run_id }}
+          BASELINE_RUN_ID: ${{ needs.canary-full-stack.outputs.baseline_run_id }}
+          AUTO_RUN_ID: ${{ needs.canary-full-stack.outputs.auto_run_id }}
+          CANDIDATE_RUN_ID: ${{ needs.canary-full-stack.outputs.candidate_run_id }}
+          METRICS_ONLY_RUN_ID: ${{ needs.canary-full-stack.outputs.metrics_only_run_id }}
+        run: |
+          set -euo pipefail
+
+          git fetch origin bench-data:bench-data
+
+          for RUN_ID in "$BASELINE_RUN_ID" "$AUTO_RUN_ID" "$CANDIDATE_RUN_ID" "$METRICS_ONLY_RUN_ID"; do
+            PATH_EXPECTED="data/runs/${RUN_ID}/benchmark.otlp.json"
+            echo "checking ${PATH_EXPECTED}"
+            git ls-tree -r --name-only bench-data | grep -Fx "${PATH_EXPECTED}"
+          done
+
+          SIDE="data/runs/${MONITOR_RUN_ID}/telemetry.otlp.jsonl.gz"
+          echo "checking ${SIDE}"
+          git ls-tree -r --name-only bench-data | grep -Fx "${SIDE}"
+
+          git ls-tree -r --name-only bench-data | grep -Fx "data/index.json"
+          git ls-tree -r --name-only bench-data | grep -E '^data/views/runs/.+\.json$' >/dev/null
+          git ls-tree -r --name-only bench-data | grep -E '^data/series/.+\.json$' >/dev/null
+
+          git show "bench-data:data/runs/${METRICS_ONLY_RUN_ID}/benchmark.otlp.json" > metrics-only.json
+          node -e '
+            const fs = require("node:fs");
+            const doc = JSON.parse(fs.readFileSync("metrics-only.json", "utf8"));
+            const rms = doc.resourceMetrics || [];
+            if (!Array.isArray(rms) || rms.length === 0) {
+              throw new Error("metrics-only stash document had no resourceMetrics");
+            }
+            console.log("metrics-only resourceMetrics:", rms.length);
+          '

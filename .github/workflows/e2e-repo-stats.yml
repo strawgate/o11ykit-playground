@@ -10,7 +10,7 @@ permissions:
   pull-requests: read
 
 concurrency:
-  group: bench-data-writes
+  group: bench-data-write-serialized
   cancel-in-progress: false
 
 jobs:

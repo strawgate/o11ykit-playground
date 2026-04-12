@@ -7,7 +7,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: bench-data-writes
+  group: bench-data-write-serialized
   cancel-in-progress: false
 
 jobs:
@@ -87,6 +87,12 @@ jobs:
         run: |
           set -euo pipefail
           git fetch origin bench-data:bench-data
-          EXPECTED="data/telemetry/${{ needs.monitor-capture.outputs.monitor_run_id }}.otlp.jsonl.gz"
-          echo "Expecting: ${EXPECTED}"
-          git ls-tree -r --name-only bench-data | grep -Fx "${EXPECTED}"
+          EXPECTED_NEW="data/runs/${{ needs.monitor-capture.outputs.monitor_run_id }}/telemetry.otlp.jsonl.gz"
+          EXPECTED_OLD="data/telemetry/${{ needs.monitor-capture.outputs.monitor_run_id }}.otlp.jsonl.gz"
+          echo "Expecting new path: ${EXPECTED_NEW}"
+          echo "Expecting old path: ${EXPECTED_OLD}"
+          if git ls-tree -r --name-only bench-data | grep -Fx "${EXPECTED_NEW}"; then
+            echo "Found run-scoped telemetry sidecar."
+            exit 0
+          fi
+          git ls-tree -r --name-only bench-data | grep -Fx "${EXPECTED_OLD}"

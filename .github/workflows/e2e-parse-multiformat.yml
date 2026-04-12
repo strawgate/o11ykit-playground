@@ -1,0 +1,170 @@
+name: e2e-parse-multiformat
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: bench-data-write-serialized
+  cancel-in-progress: false
+
+jobs:
+  parse-format-matrix:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: go
+            format: go
+            file: bench-go.txt
+          - id: rust
+            format: rust
+            file: bench-rust.txt
+          - id: hyperfine
+            format: hyperfine
+            file: bench-hyperfine.json
+          - id: pytest
+            format: pytest-benchmark
+            file: bench-pytest.json
+          - id: benchmark-action
+            format: benchmark-action
+            file: bench-action.json
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate ${{ matrix.id }} benchmark fixture
+        run: |
+          case "${{ matrix.id }}" in
+            go)
+              cat > "${{ matrix.file }}" <<'GO'
+              goos: linux
+              goarch: amd64
+              cpu: synthetic
+              BenchmarkFmt/go-json-8     2000000  640 ns/op   24 B/op  1 allocs/op
+              BenchmarkFmt/go-parse-8    1800000  810 ns/op   40 B/op  2 allocs/op
+              GO
+              ;;
+            rust)
+              cat > "${{ matrix.file }}" <<'RUST'
+              test bench_fmt_rust_a ... bench:      1,240 ns/iter (+/- 120)
+              test bench_fmt_rust_b ... bench:      1,560 ns/iter (+/- 140)
+              RUST
+              ;;
+            hyperfine)
+              cat > "${{ matrix.file }}" <<'HYP'
+              {
+                "results": [
+                  {
+                    "command": "fmt-hyperfine-a",
+                    "mean": 0.231,
+                    "stddev": 0.005,
+                    "median": 0.229,
+                    "user": 0.200,
+                    "system": 0.030,
+                    "min": 0.225,
+                    "max": 0.242,
+                    "times": [0.225, 0.229, 0.239]
+                  },
+                  {
+                    "command": "fmt-hyperfine-b",
+                    "mean": 0.287,
+                    "stddev": 0.006,
+                    "median": 0.285,
+                    "user": 0.250,
+                    "system": 0.035,
+                    "min": 0.279,
+                    "max": 0.299,
+                    "times": [0.279, 0.285, 0.299]
+                  }
+                ]
+              }
+              HYP
+              ;;
+            pytest)
+              cat > "${{ matrix.file }}" <<'PYTEST'
+              {
+                "benchmarks": [
+                  {
+                    "name": "bench_fmt_pytest_a",
+                    "fullname": "tests/bench/test_fmt.py::bench_fmt_pytest_a",
+                    "group": null,
+                    "stats": {
+                      "min": 0.0012,
+                      "max": 0.0018,
+                      "mean": 0.0015,
+                      "stddev": 0.0002,
+                      "median": 0.0015,
+                      "iqr": 0.0001,
+                      "ops": 666.6,
+                      "rounds": 1000,
+                      "iterations": 1
+                    }
+                  },
+                  {
+                    "name": "bench_fmt_pytest_b",
+                    "fullname": "tests/bench/test_fmt.py::bench_fmt_pytest_b",
+                    "group": null,
+                    "stats": {
+                      "min": 0.0016,
+                      "max": 0.0021,
+                      "mean": 0.0019,
+                      "stddev": 0.0002,
+                      "median": 0.0019,
+                      "iqr": 0.0001,
+                      "ops": 526.3,
+                      "rounds": 1000,
+                      "iterations": 1
+                    }
+                  }
+                ]
+              }
+              PYTEST
+              ;;
+            benchmark-action)
+              cat > "${{ matrix.file }}" <<'ACTION'
+              [
+                {
+                  "name": "fmt_action_a",
+                  "unit": "ns/op",
+                  "value": 712,
+                  "extra": "ignored"
+                },
+                {
+                  "name": "fmt_action_b",
+                  "unit": "ns/op",
+                  "value": 845
+                }
+              ]
+              ACTION
+              ;;
+            *)
+              echo "unknown matrix id: ${{ matrix.id }}"
+              exit 1
+              ;;
+          esac
+
+      - name: Parse and stash ${{ matrix.id }}
+        uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
+        with:
+          mode: file
+          results: ${{ matrix.file }}
+          format: ${{ matrix.format }}
+          run-id: ${{ github.run_id }}-${{ github.run_attempt }}--fmt-${{ matrix.id }}
+          github-token: ${{ github.token }}
+
+  aggregate-after-matrix:
+    runs-on: ubuntu-latest
+    needs: parse-format-matrix
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Aggregate
+        uses: strawgate/o11ykit/octo11y/actions/aggregate@main-dist
+        with:
+          github-token: ${{ github.token }}

@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@benchkit/chart": "0.2.2",
+    "@benchkit/chart": "0.2.3",
     "preact": "^10.27.2"
   },
   "devDependencies": {
