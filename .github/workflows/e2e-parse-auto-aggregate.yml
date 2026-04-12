@@ -3,9 +3,6 @@ name: e2e-parse-auto-aggregate
 on:
   workflow_dispatch:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
-
 permissions:
   contents: write
   actions: read
@@ -33,7 +30,7 @@ jobs:
     needs: emit-benchmark-logs
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Parse from workflow logs (auto)
         id: parse
