@@ -2,7 +2,7 @@
   "runs": [
     {
       "id": "bench-24293522265-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -10,7 +10,7 @@
     },
     {
       "id": "bench-24293475071-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -18,7 +18,7 @@
     },
     {
       "id": "bench-24293466129-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -26,7 +26,7 @@
     },
     {
       "id": "bench-24293454249-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -34,7 +34,7 @@
     },
     {
       "id": "bench-24293437385-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -42,7 +42,7 @@
     },
     {
       "id": "bench-24293342460-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -50,7 +50,7 @@
     },
     {
       "id": "bench-24293325030-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "09b95b07e9e8ae07fbc1ebf1e7b04ed90c53907f",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -58,7 +58,7 @@
     },
     {
       "id": "bench-24291900017-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "c0e6d8b65285ebb2187a08813ec901daf0e32d7a",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -66,7 +66,7 @@
     },
     {
       "id": "bench-24291861094-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "06af35fad930c179ccad05ec8a58686ed7d19f9a",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -74,7 +74,7 @@
     },
     {
       "id": "bench-24291818442-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "77425d344e7b329539ef1417ebd4234bed227c9a",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -82,7 +82,7 @@
     },
     {
       "id": "bench-24291397788-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "77425d344e7b329539ef1417ebd4234bed227c9a",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -90,7 +90,7 @@
     },
     {
       "id": "bench-24287762557-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "7ca27a9d392c8a483f560f0346c1b5b8ec2d5eca",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -98,7 +98,7 @@
     },
     {
       "id": "bench-24286863245-1--monitor",
-      "timestamp": "2026-04-12T08:52:40.067Z",
+      "timestamp": "2026-04-12T14:54:47.444Z",
       "commit": "ecca9cd21b0651343835dad8029be073537c5977",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -106,11 +106,27 @@
     },
     {
       "id": "24287668602-1--auto",
-      "timestamp": "2026-04-12T08:52:40.064Z",
+      "timestamp": "2026-04-12T14:54:47.441Z",
       "commit": "9175c59ffa938d7bfba47f9bc7e9a2156279422b",
       "ref": "refs/heads/main",
       "benchmarks": 0,
       "metrics": []
+    },
+    {
+      "id": "24309404677-1--repo-stats",
+      "timestamp": "2026-04-12T14:54:45.565Z",
+      "commit": "d14fb8373a389d2b376e97b0c04821a5340e2d3d",
+      "ref": "refs/heads/main",
+      "benchmarks": 1,
+      "metrics": [
+        "forks",
+        "lang_bytes_html",
+        "lang_bytes_typescript",
+        "open_issues",
+        "open_prs",
+        "stars",
+        "workflow_success_pct"
+      ]
     },
     {
       "id": "24302877985-1--repo-stats",
