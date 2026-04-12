@@ -619,6 +619,222 @@
           "run_id": "24302763037-1--fmt-go"
         }
       ]
+    },
+    "BenchmarkBurst/shard-6 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:44.099Z",
+          "value": 32,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "burst-24302774924-1--shard-6"
+        },
+        {
+          "timestamp": "2026-04-12T08:49:00.334Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-6"
+        }
+      ]
+    },
+    "BenchmarkBurst/shard-4 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:44.158Z",
+          "value": 32,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "burst-24302774924-1--shard-4"
+        },
+        {
+          "timestamp": "2026-04-12T08:48:50.191Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-4"
+        }
+      ]
+    },
+    "BenchmarkBurst/shard-9 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:44.206Z",
+          "value": 32,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "burst-24302774924-1--shard-9"
+        },
+        {
+          "timestamp": "2026-04-12T08:49:11.215Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-9"
+        }
+      ]
+    },
+    "BenchmarkBurst/shard-11 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:44.932Z",
+          "value": 32,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "burst-24302774924-1--shard-11"
+        },
+        {
+          "timestamp": "2026-04-12T08:49:17.022Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-11"
+        }
+      ]
+    },
+    "BenchmarkBurst/shard-7 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:45.833Z",
+          "value": 32,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "burst-24302774924-1--shard-7"
+        },
+        {
+          "timestamp": "2026-04-12T08:49:02.891Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-7"
+        }
+      ]
+    },
+    "BenchmarkBurst/shard-0 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:46.152Z",
+          "value": 32,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "burst-24302774924-1--shard-0"
+        },
+        {
+          "timestamp": "2026-04-12T08:48:11.461Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-0"
+        }
+      ]
+    },
+    "BenchmarkBurst/shard-2 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:46.153Z",
+          "value": 32,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "burst-24302774924-1--shard-2"
+        },
+        {
+          "timestamp": "2026-04-12T08:48:20.387Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-2"
+        }
+      ]
+    },
+    "BenchmarkBurst/shard-3 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:46.439Z",
+          "value": 32,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "burst-24302774924-1--shard-3"
+        },
+        {
+          "timestamp": "2026-04-12T08:48:49.703Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-3"
+        }
+      ]
+    },
+    "BenchmarkBurst/shard-10 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:47.106Z",
+          "value": 32,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "burst-24302774924-1--shard-10"
+        },
+        {
+          "timestamp": "2026-04-12T08:49:10.241Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-10"
+        }
+      ]
+    },
+    "BenchmarkBurst/shard-1 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:47.287Z",
+          "value": 32,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "burst-24302774924-1--shard-1"
+        },
+        {
+          "timestamp": "2026-04-12T08:48:29.530Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-1"
+        }
+      ]
+    },
+    "BenchmarkBurst/shard-5 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:48:56.425Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-5"
+        }
+      ]
+    },
+    "BenchmarkBurst/shard-8 [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:49:07.234Z",
+          "value": 32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "burst-24302797096-1--shard-8"
+        }
+      ]
     }
   }
 }

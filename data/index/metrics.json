@@ -1,15 +1,15 @@
 [
   {
     "metric": "allocs_per_op",
-    "latestSeriesCount": 13,
-    "latestRunId": "24302763037-1--fmt-go",
-    "latestTimestamp": "2026-04-12T08:46:04.165Z"
+    "latestSeriesCount": 25,
+    "latestRunId": "burst-24302797096-1--shard-11",
+    "latestTimestamp": "2026-04-12T08:49:17.022Z"
   },
   {
     "metric": "bytes_per_op",
-    "latestSeriesCount": 13,
-    "latestRunId": "24302763037-1--fmt-go",
-    "latestTimestamp": "2026-04-12T08:46:04.165Z"
+    "latestSeriesCount": 25,
+    "latestRunId": "burst-24302797096-1--shard-11",
+    "latestTimestamp": "2026-04-12T08:49:17.022Z"
   },
   {
     "metric": "fallback_file_metric",
@@ -73,9 +73,9 @@
   },
   {
     "metric": "ns_per_op",
-    "latestSeriesCount": 13,
-    "latestRunId": "24302763037-1--fmt-go",
-    "latestTimestamp": "2026-04-12T08:46:04.165Z"
+    "latestSeriesCount": 25,
+    "latestRunId": "burst-24302797096-1--shard-11",
+    "latestTimestamp": "2026-04-12T08:49:17.022Z"
   },
   {
     "metric": "open_issues",
