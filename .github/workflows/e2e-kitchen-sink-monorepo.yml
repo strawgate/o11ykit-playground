@@ -1,0 +1,333 @@
+name: e2e-kitchen-sink-monorepo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: bench-data-write-serialized
+  cancel-in-progress: false
+
+jobs:
+  emit-go-logs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Emit noisy Go benchmark logs
+        run: |
+          echo "starting synthetic job noise"
+          echo "WARN simulated-non-benchmark-line"
+          cat <<'BENCH'
+          === RUN   TestCacheWarmup
+          --- PASS: TestCacheWarmup (0.01s)
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkKitchen/log-parse-8      2000000  702 ns/op   40 B/op  2 allocs/op
+          BenchmarkKitchen/log-render-8      900000  1820 ns/op  96 B/op  4 allocs/op
+          ok      github.com/example/kitchen  2.345s
+          BENCH
+          echo "completed synthetic log emission"
+
+  parse-auto-from-logs:
+    runs-on: ubuntu-latest
+    needs: emit-go-logs
+    outputs:
+      auto_run_id: ${{ steps.ids.outputs.auto_run_id }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compute run id
+        id: ids
+        run: |
+          echo "auto_run_id=kitchen-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}--auto" >> "$GITHUB_OUTPUT"
+
+      - name: Parse benchmark logs in auto mode
+        id: parse
+        uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
+        with:
+          mode: auto
+          format: go
+          run-id: ${{ steps.ids.outputs.auto_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Assert auto mode output
+        run: |
+          test "${{ steps.parse.outputs.source }}" = "auto"
+          test -n "${{ steps.parse.outputs.file-path }}"
+
+  stash-format-matrix:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: go
+            format: go
+            pattern: .bench/go/*.txt
+          - id: rust
+            format: rust
+            pattern: .bench/rust/*.txt
+          - id: hyperfine
+            format: hyperfine
+            pattern: .bench/hyperfine/*.json
+          - id: pytest
+            format: pytest-benchmark
+            pattern: .bench/pytest/*.json
+          - id: benchmark-action
+            format: benchmark-action
+            pattern: .bench/benchmark-action/*.json
+          - id: otlp
+            format: otlp
+            pattern: .bench/otlp/*.json
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compute run ids
+        id: ids
+        run: |
+          PREFIX="kitchen-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          echo "bench_run_id=${PREFIX}--${{ matrix.id }}" >> "$GITHUB_OUTPUT"
+          echo "monitor_run_id=${PREFIX}--${{ matrix.id }}--monitor" >> "$GITHUB_OUTPUT"
+
+      - name: Start monitor
+        id: monitor
+        uses: strawgate/o11ykit/octo11y/actions/monitor@main-dist
+        with:
+          profile: ci
+          scrape-interval: 2s
+          metric-sets: cpu,memory,load,process
+          run-id: ${{ steps.ids.outputs.monitor_run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Emit one custom metric
+        uses: strawgate/o11ykit/octo11y/actions/emit-metric@main-dist
+        with:
+          otlp-http-endpoint: ${{ steps.monitor.outputs.otlp-http-endpoint }}
+          name: kitchen_custom_metric
+          value: 12
+          unit: score
+          scenario: kitchen-sink
+          series: ${{ matrix.id }}
+
+      - name: Generate ${{ matrix.id }} fixtures
+        run: |
+          mkdir -p ".bench/${{ matrix.id }}"
+          case "${{ matrix.id }}" in
+            go)
+              cat > .bench/go/core.txt <<'GO'
+              goos: linux
+              goarch: amd64
+              cpu: synthetic
+              BenchmarkKitchen/go-core-8      2100000  680 ns/op   24 B/op  1 allocs/op
+              GO
+              cat > .bench/go/io.txt <<'GO'
+              goos: linux
+              goarch: amd64
+              cpu: synthetic
+              BenchmarkKitchen/go-io-8        1200000  990 ns/op   48 B/op  2 allocs/op
+              GO
+              ;;
+            rust)
+              cat > .bench/rust/core.txt <<'RUST'
+              test bench_kitchen_rust_core ... bench:      1,240 ns/iter (+/- 120)
+              test bench_kitchen_rust_alloc ... bench:      1,560 ns/iter (+/- 140)
+              RUST
+              ;;
+            hyperfine)
+              cat > .bench/hyperfine/cli.json <<'HYP'
+              {
+                "results": [
+                  {
+                    "command": "kitchen-cli-a",
+                    "mean": 0.241,
+                    "stddev": 0.007,
+                    "median": 0.240,
+                    "min": 0.231,
+                    "max": 0.259,
+                    "times": [0.231, 0.240, 0.259]
+                  },
+                  {
+                    "command": "kitchen-cli-b",
+                    "mean": 0.318,
+                    "stddev": 0.009,
+                    "median": 0.316,
+                    "min": 0.305,
+                    "max": 0.337,
+                    "times": [0.305, 0.316, 0.337]
+                  }
+                ]
+              }
+              HYP
+              ;;
+            pytest)
+              cat > .bench/pytest/suite.json <<'PYTEST'
+              {
+                "benchmarks": [
+                  {
+                    "name": "bench_kitchen_pytest_a",
+                    "fullname": "tests/bench/test_kitchen.py::bench_kitchen_pytest_a",
+                    "stats": {
+                      "min": 0.0011,
+                      "max": 0.0017,
+                      "mean": 0.0014,
+                      "stddev": 0.0002,
+                      "median": 0.0014,
+                      "iqr": 0.0001,
+                      "ops": 714.2,
+                      "rounds": 1000,
+                      "iterations": 1
+                    }
+                  }
+                ]
+              }
+              PYTEST
+              ;;
+            benchmark-action)
+              cat > .bench/benchmark-action/feed.json <<'ACTION'
+              [
+                {
+                  "name": "kitchen_action_a",
+                  "unit": "ns/op",
+                  "value": 812,
+                  "context": "ignored"
+                },
+                {
+                  "name": "kitchen_action_b",
+                  "unit": "ns/op",
+                  "value": 935
+                }
+              ]
+              ACTION
+              ;;
+            otlp)
+              cat > .bench/otlp/direct.json <<'OTLP'
+              {
+                "resourceMetrics": [
+                  {
+                    "resource": {
+                      "attributes": [
+                        { "key": "benchkit.run_id", "value": { "stringValue": "kitchen-otlp-direct" } },
+                        { "key": "benchkit.kind", "value": { "stringValue": "workflow" } },
+                        { "key": "benchkit.source_format", "value": { "stringValue": "otlp" } }
+                      ]
+                    },
+                    "scopeMetrics": [
+                      {
+                        "metrics": [
+                          {
+                            "name": "kitchen_direct_metric",
+                            "unit": "ms",
+                            "gauge": {
+                              "dataPoints": [
+                                {
+                                  "attributes": [
+                                    { "key": "benchkit.scenario", "value": { "stringValue": "kitchen-direct" } },
+                                    { "key": "benchkit.series", "value": { "stringValue": "otlp" } },
+                                    { "key": "benchkit.metric.direction", "value": { "stringValue": "smaller_is_better" } }
+                                  ],
+                                  "timeUnixNano": "1711929600000000000",
+                                  "asDouble": 42.5
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+              OTLP
+              ;;
+            *)
+              echo "unsupported matrix id: ${{ matrix.id }}"
+              exit 1
+              ;;
+          esac
+
+      - name: Parse and stash ${{ matrix.id }}
+        uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
+        with:
+          mode: file
+          format: ${{ matrix.format }}
+          results: ${{ matrix.pattern }}
+          run-id: ${{ steps.ids.outputs.bench_run_id }}
+          github-token: ${{ github.token }}
+
+  compare-go-candidate:
+    runs-on: ubuntu-latest
+    needs: stash-format-matrix
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Write candidate benchmark
+        run: |
+          cat > candidate.txt <<'BENCH'
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkKitchen/go-core-8      2100000  760 ns/op   24 B/op  1 allocs/op
+          BenchmarkKitchen/go-io-8        1200000  1050 ns/op  48 B/op  2 allocs/op
+          BENCH
+
+      - name: Compare against latest baseline
+        id: compare
+        uses: strawgate/o11ykit/octo11y/actions/compare@main-dist
+        with:
+          results: candidate.txt
+          format: go
+          baseline-runs: 3
+          threshold: 5
+          fail-on-regression: false
+          comment-on-pr: false
+          github-token: ${{ github.token }}
+
+      - name: Assert compare summary exists
+        run: |
+          test -n "${{ steps.compare.outputs.summary }}"
+
+  aggregate-and-verify:
+    runs-on: ubuntu-latest
+    needs:
+      - parse-auto-from-logs
+      - stash-format-matrix
+      - compare-go-candidate
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Aggregate
+        uses: strawgate/o11ykit/octo11y/actions/aggregate@main-dist
+        with:
+          github-token: ${{ github.token }}
+
+      - name: Verify expected bench-data artifacts exist
+        env:
+          AUTO_RUN_ID: ${{ needs.parse-auto-from-logs.outputs.auto_run_id }}
+        run: |
+          set -euo pipefail
+
+          git fetch origin bench-data:bench-data
+
+          PREFIX="kitchen-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+
+          git ls-tree -r --name-only bench-data | grep -Fx "data/runs/${AUTO_RUN_ID}/benchmark.otlp.json"
+
+          for ID in go rust hyperfine pytest benchmark-action otlp; do
+            RUN_PATH="data/runs/${PREFIX}--${ID}/benchmark.otlp.json"
+            SIDE_PATH="data/runs/${PREFIX}--${ID}--monitor/telemetry.otlp.jsonl.gz"
+            echo "checking ${RUN_PATH}"
+            git ls-tree -r --name-only bench-data | grep -Fx "${RUN_PATH}"
+            echo "checking ${SIDE_PATH}"
+            git ls-tree -r --name-only bench-data | grep -Fx "${SIDE_PATH}"
+          done
+
+          git ls-tree -r --name-only bench-data | grep -Fx "data/index.json"
+          git ls-tree -r --name-only bench-data | grep -E '^data/views/runs/.+\.json$' >/dev/null
+          git ls-tree -r --name-only bench-data | grep -E '^data/series/.+\.json$' >/dev/null

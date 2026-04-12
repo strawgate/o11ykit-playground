@@ -19,6 +19,8 @@ External end-to-end playground for `strawgate/o11ykit` actions and packages.
 - `e2e-repo-stats`
 - `e2e-parse-multiformat` (Go, Rust, Hyperfine, pytest-benchmark, benchmark-action)
 - `e2e-canary-ergonomics` (canary o11ykit ref with local-built actions)
+- `e2e-kitchen-sink-monorepo` (auto log parse, six formats, monitor sidecars, compare, aggregate)
+- `e2e-concurrency-burst` (12 concurrent stash writes into `bench-data` + aggregate verification)
 - `deploy-playground-pages`
 
 ## Canary ergonomics flow
@@ -36,6 +38,20 @@ Run it manually:
 ```bash
 gh workflow run e2e-canary-ergonomics.yml --repo strawgate/o11ykit-playground \
   -f o11ykit-ref=main
+```
+
+## Hard mode runs
+
+Run the kitchen-sink flow:
+
+```bash
+gh workflow run e2e-kitchen-sink-monorepo.yml --repo strawgate/o11ykit-playground
+```
+
+Run the concurrent write burst:
+
+```bash
+gh workflow run e2e-concurrency-burst.yml --repo strawgate/o11ykit-playground
 ```
 
 ## Data branch
