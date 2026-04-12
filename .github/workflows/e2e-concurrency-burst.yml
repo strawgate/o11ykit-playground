@@ -1,0 +1,71 @@
+name: e2e-concurrency-burst
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bench-data-write-serialized
+  cancel-in-progress: false
+
+jobs:
+  stash-burst:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate shard benchmark fixture
+        run: |
+          VALUE=$((680 + ${{ matrix.shard }} * 7))
+          ALLOCS=$((1 + ${{ matrix.shard }} % 3))
+          cat > bench-${{ matrix.shard }}.txt <<BENCH
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkBurst/shard-${{ matrix.shard }}-8    2000000  ${VALUE} ns/op   32 B/op  ${ALLOCS} allocs/op
+          BENCH
+
+      - name: Parse and stash shard
+        uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
+        with:
+          mode: file
+          results: bench-${{ matrix.shard }}.txt
+          format: go
+          run-id: burst-${{ github.run_id }}-${{ github.run_attempt }}--shard-${{ matrix.shard }}
+          github-token: ${{ github.token }}
+
+  aggregate-and-verify:
+    runs-on: ubuntu-latest
+    needs: stash-burst
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Aggregate burst writes
+        uses: strawgate/o11ykit/octo11y/actions/aggregate@main-dist
+        with:
+          github-token: ${{ github.token }}
+
+      - name: Verify all shard artifacts
+        run: |
+          set -euo pipefail
+
+          git fetch origin bench-data:bench-data
+
+          PREFIX="burst-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          for SHARD in 0 1 2 3 4 5 6 7 8 9 10 11; do
+            PATH_EXPECTED="data/runs/${PREFIX}--shard-${SHARD}/benchmark.otlp.json"
+            echo "checking ${PATH_EXPECTED}"
+            git ls-tree -r --name-only bench-data | grep -Fx "${PATH_EXPECTED}"
+          done
+
+          git ls-tree -r --name-only bench-data | grep -Fx "data/index.json"
+          git ls-tree -r --name-only bench-data | grep -E '^data/views/runs/.+\.json$' >/dev/null
+          git ls-tree -r --name-only bench-data | grep -E '^data/series/.+\.json$' >/dev/null
