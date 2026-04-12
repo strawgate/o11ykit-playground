@@ -28,10 +28,13 @@ jobs:
     steps:
       - name: Checkout playground
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       - name: Checkout o11ykit canary ref
         uses: actions/checkout@v6
         with:
+          persist-credentials: false
           repository: strawgate/o11ykit
           ref: ${{ inputs.o11ykit-ref }}
           path: .o11ykit
@@ -192,6 +195,8 @@ jobs:
     steps:
       - name: Checkout playground
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       - name: Verify bench-data artifacts from canary run
         env:
