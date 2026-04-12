@@ -909,6 +909,19 @@
           "run_id": "burst-24302797096-1--shard-8"
         }
       ]
+    },
+    "BenchmarkMonitor/path-a [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:52:10.979Z",
+          "value": 2200,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "bench-24302867178-1--monitor"
+        }
+      ]
     }
   }
 }

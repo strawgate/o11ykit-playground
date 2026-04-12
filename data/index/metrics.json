@@ -1,15 +1,15 @@
 [
   {
     "metric": "allocs_per_op",
-    "latestSeriesCount": 25,
-    "latestRunId": "24302856669-1--auto",
-    "latestTimestamp": "2026-04-12T08:51:48.349Z"
+    "latestSeriesCount": 26,
+    "latestRunId": "bench-24302867178-1--monitor",
+    "latestTimestamp": "2026-04-12T08:52:10.979Z"
   },
   {
     "metric": "bytes_per_op",
-    "latestSeriesCount": 25,
-    "latestRunId": "24302856669-1--auto",
-    "latestTimestamp": "2026-04-12T08:51:48.349Z"
+    "latestSeriesCount": 26,
+    "latestRunId": "bench-24302867178-1--monitor",
+    "latestTimestamp": "2026-04-12T08:52:10.979Z"
   },
   {
     "metric": "fallback_file_metric",
@@ -79,9 +79,9 @@
   },
   {
     "metric": "ns_per_op",
-    "latestSeriesCount": 25,
-    "latestRunId": "24302856669-1--auto",
-    "latestTimestamp": "2026-04-12T08:51:48.349Z"
+    "latestSeriesCount": 26,
+    "latestRunId": "bench-24302867178-1--monitor",
+    "latestTimestamp": "2026-04-12T08:52:10.979Z"
   },
   {
     "metric": "open_issues",
