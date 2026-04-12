@@ -2,14 +2,14 @@
   {
     "metric": "allocs_per_op",
     "latestSeriesCount": 26,
-    "latestRunId": "bench-24302867178-1--monitor",
-    "latestTimestamp": "2026-04-12T08:52:10.979Z"
+    "latestRunId": "24309453851-1--candidate",
+    "latestTimestamp": "2026-04-12T14:57:34.725Z"
   },
   {
     "metric": "bytes_per_op",
     "latestSeriesCount": 26,
-    "latestRunId": "bench-24302867178-1--monitor",
-    "latestTimestamp": "2026-04-12T08:52:10.979Z"
+    "latestRunId": "24309453851-1--candidate",
+    "latestTimestamp": "2026-04-12T14:57:34.725Z"
   },
   {
     "metric": "fallback_file_metric",
@@ -80,8 +80,8 @@
   {
     "metric": "ns_per_op",
     "latestSeriesCount": 26,
-    "latestRunId": "bench-24302867178-1--monitor",
-    "latestTimestamp": "2026-04-12T08:52:10.979Z"
+    "latestRunId": "24309453851-1--candidate",
+    "latestTimestamp": "2026-04-12T14:57:34.725Z"
   },
   {
     "metric": "open_issues",
