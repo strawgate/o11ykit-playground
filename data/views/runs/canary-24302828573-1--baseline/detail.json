@@ -1,0 +1,135 @@
+{
+  "run": {
+    "id": "canary-24302828573-1--baseline",
+    "timestamp": "2026-04-12T08:50:28.388Z",
+    "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+    "ref": "refs/heads/main",
+    "benchmarks": 4,
+    "metrics": [
+      "allocs_per_op",
+      "bytes_per_op",
+      "fallback_file_metric",
+      "ns_per_op"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "allocs_per_op",
+      "unit": "allocs/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkParser/json-small [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkParser/json-large [procs=8]",
+          "value": 2,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkParser/msgpack [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "bytes_per_op",
+      "unit": "B/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkParser/json-small [procs=8]",
+          "value": 32,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkParser/json-large [procs=8]",
+          "value": 64,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkParser/msgpack [procs=8]",
+          "value": 24,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "fallback_file_metric",
+      "unit": "score",
+      "direction": "bigger_is_better",
+      "values": [
+        {
+          "name": "fallback [emit_mode=file]",
+          "value": 11,
+          "unit": "score",
+          "direction": "bigger_is_better",
+          "tags": {
+            "emit_mode": "file"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "ns_per_op",
+      "unit": "ns/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkParser/json-small [procs=8]",
+          "value": 700,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkParser/json-large [procs=8]",
+          "value": 930,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkParser/msgpack [procs=8]",
+          "value": 620,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    }
+  ]
+}

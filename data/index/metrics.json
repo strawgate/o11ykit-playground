@@ -2,20 +2,20 @@
   {
     "metric": "allocs_per_op",
     "latestSeriesCount": 25,
-    "latestRunId": "burst-24302797096-1--shard-11",
-    "latestTimestamp": "2026-04-12T08:49:17.022Z"
+    "latestRunId": "canary-24302828573-1--candidate",
+    "latestTimestamp": "2026-04-12T08:50:30.799Z"
   },
   {
     "metric": "bytes_per_op",
     "latestSeriesCount": 25,
-    "latestRunId": "burst-24302797096-1--shard-11",
-    "latestTimestamp": "2026-04-12T08:49:17.022Z"
+    "latestRunId": "canary-24302828573-1--candidate",
+    "latestTimestamp": "2026-04-12T08:50:30.799Z"
   },
   {
     "metric": "fallback_file_metric",
     "latestSeriesCount": 1,
-    "latestRunId": "canary-24301370517-1--baseline",
-    "latestTimestamp": "2026-04-12T07:23:20.669Z"
+    "latestRunId": "canary-24302828573-1--candidate",
+    "latestTimestamp": "2026-04-12T08:50:30.799Z"
   },
   {
     "metric": "forks",
@@ -60,6 +60,12 @@
     "latestTimestamp": "2026-04-12T08:46:05.248Z"
   },
   {
+    "metric": "metrics_only_counter",
+    "latestSeriesCount": 1,
+    "latestRunId": "canary-24302828573-1--metrics-only",
+    "latestTimestamp": "2026-04-12T08:50:28.263Z"
+  },
+  {
     "metric": "min",
     "latestSeriesCount": 7,
     "latestRunId": "24302763037-1--fmt-hyperfine",
@@ -74,8 +80,8 @@
   {
     "metric": "ns_per_op",
     "latestSeriesCount": 25,
-    "latestRunId": "burst-24302797096-1--shard-11",
-    "latestTimestamp": "2026-04-12T08:49:17.022Z"
+    "latestRunId": "canary-24302828573-1--candidate",
+    "latestTimestamp": "2026-04-12T08:50:30.799Z"
   },
   {
     "metric": "open_issues",

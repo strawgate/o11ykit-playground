@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "allocs per op",
-  "message": "3 allocs/op",
-  "color": "red"
+  "message": "1.33 allocs/op",
+  "color": "blue"
 }

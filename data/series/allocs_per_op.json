@@ -471,6 +471,18 @@
           "value": 1,
           "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
           "run_id": "canary-24301370517-1--baseline"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.388Z",
+          "value": 1,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--baseline"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:30.799Z",
+          "value": 1,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--candidate"
         }
       ]
     },
@@ -484,6 +496,18 @@
           "value": 2,
           "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
           "run_id": "canary-24301370517-1--baseline"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.388Z",
+          "value": 2,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--baseline"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:30.799Z",
+          "value": 2,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--candidate"
         }
       ]
     },
@@ -497,6 +521,18 @@
           "value": 1,
           "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
           "run_id": "canary-24301370517-1--baseline"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.388Z",
+          "value": 1,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--baseline"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:30.799Z",
+          "value": 1,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--candidate"
         }
       ]
     },

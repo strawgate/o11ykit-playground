@@ -1,0 +1,20 @@
+{
+  "metric": "metrics_only_counter",
+  "unit": "count",
+  "direction": "bigger_is_better",
+  "series": {
+    "metrics-only [mode=metrics-only]": {
+      "tags": {
+        "mode": "metrics-only"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:50:28.263Z",
+          "value": 3,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--metrics-only"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "run": {
+    "id": "canary-24302828573-1--metrics-only",
+    "timestamp": "2026-04-12T08:50:28.263Z",
+    "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+    "ref": "refs/heads/main",
+    "benchmarks": 2,
+    "metrics": [
+      "fallback_file_metric",
+      "metrics_only_counter"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "fallback_file_metric",
+      "unit": "score",
+      "direction": "bigger_is_better",
+      "values": [
+        {
+          "name": "fallback [emit_mode=file]",
+          "value": 11,
+          "unit": "score",
+          "direction": "bigger_is_better",
+          "tags": {
+            "emit_mode": "file"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "metrics_only_counter",
+      "unit": "count",
+      "direction": "bigger_is_better",
+      "values": [
+        {
+          "name": "standalone [mode=metrics-only]",
+          "value": 3,
+          "unit": "count",
+          "direction": "bigger_is_better",
+          "tags": {
+            "mode": "metrics-only"
+          }
+        }
+      ]
+    }
+  ]
+}
