@@ -1,0 +1,469 @@
+{
+  "run": {
+    "id": "kitchen-24302668714-1--auto",
+    "timestamp": "2026-04-12T08:40:52.622Z",
+    "commit": "7c117e34f883510abd777e1c00fe912b43178885",
+    "ref": "refs/heads/main",
+    "benchmarks": 4,
+    "metrics": [
+      "allocs_per_op",
+      "bytes_per_op",
+      "ns_per_op"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "allocs_per_op",
+      "unit": "allocs/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkKitchen/log-parse [procs=8]",
+          "value": 2,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/log-render [procs=8]",
+          "value": 4,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/log-parse [procs=8]",
+          "value": 2,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/log-render [procs=8]",
+          "value": 4,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 2,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 2,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 2,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 2,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 2,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 2,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "bytes_per_op",
+      "unit": "B/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkKitchen/log-parse [procs=8]",
+          "value": 40,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/log-render [procs=8]",
+          "value": 96,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/log-parse [procs=8]",
+          "value": 40,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/log-render [procs=8]",
+          "value": 96,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 24,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 48,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 24,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 48,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 24,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 48,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 24,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 48,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 24,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 48,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 24,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 48,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "ns_per_op",
+      "unit": "ns/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkKitchen/log-parse [procs=8]",
+          "value": 702,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/log-render [procs=8]",
+          "value": 1820,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/log-parse [procs=8]",
+          "value": 702,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/log-render [procs=8]",
+          "value": 1820,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 680,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 990,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 680,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 990,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 680,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 990,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 680,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 990,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 680,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 990,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-core [procs=8]",
+          "value": 680,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkKitchen/go-io [procs=8]",
+          "value": 990,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    }
+  ]
+}

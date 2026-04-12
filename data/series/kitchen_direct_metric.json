@@ -1,0 +1,17 @@
+{
+  "metric": "kitchen_direct_metric",
+  "unit": "ms",
+  "direction": "smaller_is_better",
+  "series": {
+    "kitchen-direct": {
+      "points": [
+        {
+          "timestamp": "2024-04-01T00:00:00.000Z",
+          "value": 42.5,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--otlp"
+        }
+      ]
+    }
+  }
+}

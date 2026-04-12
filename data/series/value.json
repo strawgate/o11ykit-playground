@@ -1,0 +1,27 @@
+{
+  "metric": "value",
+  "unit": "ns/op",
+  "direction": "smaller_is_better",
+  "series": {
+    "kitchen_action_a": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:45:04.873Z",
+          "value": 812,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--benchmark-action"
+        }
+      ]
+    },
+    "kitchen_action_b": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:45:04.873Z",
+          "value": 935,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--benchmark-action"
+        }
+      ]
+    }
+  }
+}

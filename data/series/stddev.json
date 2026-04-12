@@ -1,0 +1,37 @@
+{
+  "metric": "stddev",
+  "unit": "s",
+  "direction": "smaller_is_better",
+  "series": {
+    "kitchen-cli-a": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:45:06.282Z",
+          "value": 0.01,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--hyperfine"
+        }
+      ]
+    },
+    "kitchen-cli-b": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:45:06.282Z",
+          "value": 0.01,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--hyperfine"
+        }
+      ]
+    },
+    "bench_kitchen_pytest_a": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:45:08.277Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--pytest"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "run": {
+    "id": "kitchen-24302746788-1--hyperfine",
+    "timestamp": "2026-04-12T08:45:06.282Z",
+    "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+    "ref": "refs/heads/main",
+    "benchmarks": 2,
+    "metrics": [
+      "max",
+      "mean",
+      "median",
+      "min",
+      "stddev"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "max",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "kitchen-cli-a",
+          "value": 0.259,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "kitchen-cli-b",
+          "value": 0.337,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "mean",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "kitchen-cli-a",
+          "value": 0.241,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "kitchen-cli-b",
+          "value": 0.318,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "median",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "kitchen-cli-a",
+          "value": 0.24,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "kitchen-cli-b",
+          "value": 0.316,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "min",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "kitchen-cli-a",
+          "value": 0.231,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "kitchen-cli-b",
+          "value": 0.305,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "stddev",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "kitchen-cli-a",
+          "value": 0.007,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "kitchen-cli-b",
+          "value": 0.009,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    }
+  ]
+}

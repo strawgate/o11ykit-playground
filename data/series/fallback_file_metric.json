@@ -1,0 +1,20 @@
+{
+  "metric": "fallback_file_metric",
+  "unit": "score",
+  "direction": "bigger_is_better",
+  "series": {
+    "canary-flow [emit_mode=file]": {
+      "tags": {
+        "emit_mode": "file"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.669Z",
+          "value": 11,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--baseline"
+        }
+      ]
+    }
+  }
+}

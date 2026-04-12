@@ -1,0 +1,33 @@
+{
+  "run": {
+    "id": "kitchen-24302746788-1--rust",
+    "timestamp": "2026-04-12T08:45:06.820Z",
+    "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+    "ref": "refs/heads/main",
+    "benchmarks": 2,
+    "metrics": [
+      "ns_per_iter"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "ns_per_iter",
+      "unit": "ns/iter",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "bench_kitchen_rust_core",
+          "value": 1240,
+          "unit": "ns/iter",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "bench_kitchen_rust_alloc",
+          "value": 1560,
+          "unit": "ns/iter",
+          "direction": "smaller_is_better"
+        }
+      ]
+    }
+  ]
+}

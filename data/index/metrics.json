@@ -1,21 +1,33 @@
 [
   {
     "metric": "allocs_per_op",
-    "latestSeriesCount": 4,
-    "latestRunId": "24293513065-1--auto",
-    "latestTimestamp": "2026-04-11T22:59:22.924Z"
+    "latestSeriesCount": 11,
+    "latestRunId": "kitchen-24302746788-1--auto",
+    "latestTimestamp": "2026-04-12T08:45:30.666Z"
   },
   {
     "metric": "bytes_per_op",
-    "latestSeriesCount": 4,
-    "latestRunId": "24293513065-1--auto",
-    "latestTimestamp": "2026-04-11T22:59:22.924Z"
+    "latestSeriesCount": 11,
+    "latestRunId": "kitchen-24302746788-1--auto",
+    "latestTimestamp": "2026-04-12T08:45:30.666Z"
+  },
+  {
+    "metric": "fallback_file_metric",
+    "latestSeriesCount": 1,
+    "latestRunId": "canary-24301370517-1--baseline",
+    "latestTimestamp": "2026-04-12T07:23:20.669Z"
   },
   {
     "metric": "forks",
     "latestSeriesCount": 1,
     "latestRunId": "24293446381-1--repo-stats",
     "latestTimestamp": "2026-04-11T22:54:45.764Z"
+  },
+  {
+    "metric": "kitchen_direct_metric",
+    "latestSeriesCount": 1,
+    "latestRunId": "kitchen-24302746788-1--otlp",
+    "latestTimestamp": "2024-04-01T00:00:00.000Z"
   },
   {
     "metric": "lang_bytes_html",
@@ -30,10 +42,40 @@
     "latestTimestamp": "2026-04-11T22:54:45.764Z"
   },
   {
+    "metric": "max",
+    "latestSeriesCount": 3,
+    "latestRunId": "kitchen-24302746788-1--pytest",
+    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+  },
+  {
+    "metric": "mean",
+    "latestSeriesCount": 3,
+    "latestRunId": "kitchen-24302746788-1--pytest",
+    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+  },
+  {
+    "metric": "median",
+    "latestSeriesCount": 3,
+    "latestRunId": "kitchen-24302746788-1--pytest",
+    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+  },
+  {
+    "metric": "min",
+    "latestSeriesCount": 3,
+    "latestRunId": "kitchen-24302746788-1--pytest",
+    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+  },
+  {
+    "metric": "ns_per_iter",
+    "latestSeriesCount": 2,
+    "latestRunId": "kitchen-24302746788-1--rust",
+    "latestTimestamp": "2026-04-12T08:45:06.820Z"
+  },
+  {
     "metric": "ns_per_op",
-    "latestSeriesCount": 4,
-    "latestRunId": "24293513065-1--auto",
-    "latestTimestamp": "2026-04-11T22:59:22.924Z"
+    "latestSeriesCount": 11,
+    "latestRunId": "kitchen-24302746788-1--auto",
+    "latestTimestamp": "2026-04-12T08:45:30.666Z"
   },
   {
     "metric": "open_issues",
@@ -48,10 +90,34 @@
     "latestTimestamp": "2026-04-11T22:54:45.764Z"
   },
   {
+    "metric": "ops",
+    "latestSeriesCount": 1,
+    "latestRunId": "kitchen-24302746788-1--pytest",
+    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+  },
+  {
+    "metric": "rounds",
+    "latestSeriesCount": 1,
+    "latestRunId": "kitchen-24302746788-1--pytest",
+    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+  },
+  {
     "metric": "stars",
     "latestSeriesCount": 1,
     "latestRunId": "24293446381-1--repo-stats",
     "latestTimestamp": "2026-04-11T22:54:45.764Z"
+  },
+  {
+    "metric": "stddev",
+    "latestSeriesCount": 3,
+    "latestRunId": "kitchen-24302746788-1--pytest",
+    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+  },
+  {
+    "metric": "value",
+    "latestSeriesCount": 2,
+    "latestRunId": "kitchen-24302746788-1--benchmark-action",
+    "latestTimestamp": "2026-04-12T08:45:04.873Z"
   },
   {
     "metric": "workflow_success_pct",

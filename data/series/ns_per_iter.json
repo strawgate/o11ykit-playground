@@ -1,0 +1,27 @@
+{
+  "metric": "ns_per_iter",
+  "unit": "ns/iter",
+  "direction": "smaller_is_better",
+  "series": {
+    "bench_kitchen_rust_core": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:45:06.820Z",
+          "value": 1240,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--rust"
+        }
+      ]
+    },
+    "bench_kitchen_rust_alloc": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:45:06.820Z",
+          "value": 1560,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--rust"
+        }
+      ]
+    }
+  }
+}

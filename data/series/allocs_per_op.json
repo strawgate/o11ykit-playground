@@ -460,6 +460,139 @@
           "range": 0
         }
       ]
+    },
+    "BenchmarkParser/json-small [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.669Z",
+          "value": 1,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--baseline"
+        }
+      ]
+    },
+    "BenchmarkParser/json-large [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.669Z",
+          "value": 2,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--baseline"
+        }
+      ]
+    },
+    "BenchmarkParser/msgpack [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.669Z",
+          "value": 1,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--baseline"
+        }
+      ]
+    },
+    "BenchmarkKitchen/log-parse [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:40:52.622Z",
+          "value": 2,
+          "commit": "7c117e34f883510abd777e1c00fe912b43178885",
+          "run_id": "kitchen-24302668714-1--auto",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:30.666Z",
+          "value": 2,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--auto",
+          "range": 0
+        }
+      ]
+    },
+    "BenchmarkKitchen/log-render [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:40:52.622Z",
+          "value": 4,
+          "commit": "7c117e34f883510abd777e1c00fe912b43178885",
+          "run_id": "kitchen-24302668714-1--auto",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:30.666Z",
+          "value": 4,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--auto",
+          "range": 0
+        }
+      ]
+    },
+    "BenchmarkKitchen/go-core [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:40:52.622Z",
+          "value": 1,
+          "commit": "7c117e34f883510abd777e1c00fe912b43178885",
+          "run_id": "kitchen-24302668714-1--auto",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.386Z",
+          "value": 1,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go"
+        },
+        {
+          "timestamp": "2026-04-12T08:45:30.666Z",
+          "value": 1,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--auto"
+        }
+      ]
+    },
+    "BenchmarkKitchen/go-io [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:40:52.622Z",
+          "value": 2,
+          "commit": "7c117e34f883510abd777e1c00fe912b43178885",
+          "run_id": "kitchen-24302668714-1--auto",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.386Z",
+          "value": 2,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go"
+        },
+        {
+          "timestamp": "2026-04-12T08:45:30.666Z",
+          "value": 2,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--auto"
+        }
+      ]
     }
   }
 }
