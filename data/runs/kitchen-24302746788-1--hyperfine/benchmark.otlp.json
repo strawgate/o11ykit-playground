@@ -1,0 +1,380 @@
+{
+  "resourceMetrics": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "benchkit.source_format",
+            "value": {
+              "stringValue": "hyperfine"
+            }
+          },
+          {
+            "key": "benchkit.ref",
+            "value": {
+              "stringValue": "refs/heads/main"
+            }
+          },
+          {
+            "key": "benchkit.commit",
+            "value": {
+              "stringValue": "f9f770e51aa279e61e248ecf0329b5ca23194bfa"
+            }
+          },
+          {
+            "key": "benchkit.runner",
+            "value": {
+              "stringValue": "Linux/X64"
+            }
+          }
+        ]
+      },
+      "scopeMetrics": [
+        {
+          "metrics": [
+            {
+              "name": "mean",
+              "unit": "s",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775983506282000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "kitchen-cli-a"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "kitchen-cli-a"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      }
+                    ],
+                    "asDouble": 0.241
+                  },
+                  {
+                    "timeUnixNano": "1775983506282000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "kitchen-cli-b"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "kitchen-cli-b"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      }
+                    ],
+                    "asDouble": 0.318
+                  }
+                ]
+              }
+            },
+            {
+              "name": "stddev",
+              "unit": "s",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775983506282000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "kitchen-cli-a"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "kitchen-cli-a"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      }
+                    ],
+                    "asDouble": 0.007
+                  },
+                  {
+                    "timeUnixNano": "1775983506282000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "kitchen-cli-b"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "kitchen-cli-b"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      }
+                    ],
+                    "asDouble": 0.009
+                  }
+                ]
+              }
+            },
+            {
+              "name": "median",
+              "unit": "s",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775983506282000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "kitchen-cli-a"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "kitchen-cli-a"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      }
+                    ],
+                    "asDouble": 0.24
+                  },
+                  {
+                    "timeUnixNano": "1775983506282000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "kitchen-cli-b"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "kitchen-cli-b"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      }
+                    ],
+                    "asDouble": 0.316
+                  }
+                ]
+              }
+            },
+            {
+              "name": "min",
+              "unit": "s",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775983506282000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "kitchen-cli-a"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "kitchen-cli-a"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      }
+                    ],
+                    "asDouble": 0.231
+                  },
+                  {
+                    "timeUnixNano": "1775983506282000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "kitchen-cli-b"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "kitchen-cli-b"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      }
+                    ],
+                    "asDouble": 0.305
+                  }
+                ]
+              }
+            },
+            {
+              "name": "max",
+              "unit": "s",
+              "gauge": {
+                "dataPoints": [
+                  {
+                    "timeUnixNano": "1775983506282000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "kitchen-cli-a"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "kitchen-cli-a"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      }
+                    ],
+                    "asDouble": 0.259
+                  },
+                  {
+                    "timeUnixNano": "1775983506282000000",
+                    "attributes": [
+                      {
+                        "key": "benchkit.scenario",
+                        "value": {
+                          "stringValue": "kitchen-cli-b"
+                        }
+                      },
+                      {
+                        "key": "benchkit.series",
+                        "value": {
+                          "stringValue": "kitchen-cli-b"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.role",
+                        "value": {
+                          "stringValue": "outcome"
+                        }
+                      },
+                      {
+                        "key": "benchkit.metric.direction",
+                        "value": {
+                          "stringValue": "smaller_is_better"
+                        }
+                      }
+                    ],
+                    "asDouble": 0.337
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
