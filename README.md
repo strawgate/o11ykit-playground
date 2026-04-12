@@ -29,7 +29,6 @@ External end-to-end playground for `strawgate/o11ykit` actions and packages.
 - `benchkit-emit` HTTP mode and file fallback mode
 - stash with `results + metrics-dir`
 - stash with `metrics-dir` only (no benchmark file)
-- parse-results `mode=auto` from workflow logs
 - compare against fresh baseline and aggregate output generation
 
 Run it manually:

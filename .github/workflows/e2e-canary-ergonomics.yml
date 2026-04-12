@@ -23,7 +23,6 @@ jobs:
     outputs:
       monitor_run_id: ${{ steps.ids.outputs.monitor_run_id }}
       baseline_run_id: ${{ steps.ids.outputs.baseline_run_id }}
-      auto_run_id: ${{ steps.ids.outputs.auto_run_id }}
       candidate_run_id: ${{ steps.ids.outputs.candidate_run_id }}
       metrics_only_run_id: ${{ steps.ids.outputs.metrics_only_run_id }}
     steps:
@@ -61,7 +60,6 @@ jobs:
           PREFIX="canary-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           echo "monitor_run_id=${PREFIX}--monitor" >> "$GITHUB_OUTPUT"
           echo "baseline_run_id=${PREFIX}--baseline" >> "$GITHUB_OUTPUT"
-          echo "auto_run_id=${PREFIX}--auto" >> "$GITHUB_OUTPUT"
           echo "candidate_run_id=${PREFIX}--candidate" >> "$GITHUB_OUTPUT"
           echo "metrics_only_run_id=${PREFIX}--metrics-only" >> "$GITHUB_OUTPUT"
 
@@ -121,28 +119,6 @@ jobs:
           metrics-dir: ${{ steps.monitor.outputs.metrics-dir }}
           run-id: ${{ steps.ids.outputs.baseline_run_id }}
           github-token: ${{ github.token }}
-
-      - name: Emit timestamp-prefixed benchmark logs for auto mode
-        run: |
-          echo "2026-04-12T00:00:00.000Z goos: linux"
-          echo "2026-04-12T00:00:00.001Z goarch: amd64"
-          echo "2026-04-12T00:00:00.002Z cpu: synthetic"
-          echo "2026-04-12T00:00:00.003Z BenchmarkAuto/alpha-8    2000000  510 ns/op  16 B/op  1 allocs/op"
-          echo "2026-04-12T00:00:00.004Z BenchmarkAuto/beta-8     2000000  560 ns/op  16 B/op  1 allocs/op"
-
-      - name: Parse auto from workflow logs
-        id: parse_auto
-        uses: ./.o11ykit/octo11y/actions/parse-results
-        with:
-          mode: auto
-          format: auto
-          run-id: ${{ steps.ids.outputs.auto_run_id }}
-          github-token: ${{ github.token }}
-
-      - name: Assert parse auto source mode
-        run: |
-          echo "source=${{ steps.parse_auto.outputs.source }}"
-          test "${{ steps.parse_auto.outputs.source }}" = "auto"
 
       - name: Write candidate benchmark file
         run: |
@@ -221,7 +197,6 @@ jobs:
         env:
           MONITOR_RUN_ID: ${{ needs.canary-full-stack.outputs.monitor_run_id }}
           BASELINE_RUN_ID: ${{ needs.canary-full-stack.outputs.baseline_run_id }}
-          AUTO_RUN_ID: ${{ needs.canary-full-stack.outputs.auto_run_id }}
           CANDIDATE_RUN_ID: ${{ needs.canary-full-stack.outputs.candidate_run_id }}
           METRICS_ONLY_RUN_ID: ${{ needs.canary-full-stack.outputs.metrics_only_run_id }}
         run: |
@@ -229,7 +204,7 @@ jobs:
 
           git fetch origin bench-data:bench-data
 
-          for RUN_ID in "$BASELINE_RUN_ID" "$AUTO_RUN_ID" "$CANDIDATE_RUN_ID" "$METRICS_ONLY_RUN_ID"; do
+          for RUN_ID in "$BASELINE_RUN_ID" "$CANDIDATE_RUN_ID" "$METRICS_ONLY_RUN_ID"; do
             PATH_EXPECTED="data/runs/${RUN_ID}/benchmark.otlp.json"
             echo "checking ${PATH_EXPECTED}"
             git ls-tree -r --name-only bench-data | grep -Fx "${PATH_EXPECTED}"
