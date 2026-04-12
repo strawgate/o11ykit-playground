@@ -3,9 +3,6 @@ name: e2e-parse-multiformat
 on:
   workflow_dispatch:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
-
 permissions:
   contents: write
   actions: read
@@ -38,7 +35,7 @@ jobs:
             file: bench-action.json
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Generate go benchmark fixture
         if: matrix.id == 'go'
@@ -166,7 +163,7 @@ jobs:
     needs: parse-format-matrix
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Aggregate
         uses: strawgate/o11ykit/octo11y/actions/aggregate@main-dist

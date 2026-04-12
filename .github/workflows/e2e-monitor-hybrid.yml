@@ -3,9 +3,6 @@ name: e2e-monitor-hybrid
 on:
   workflow_dispatch:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
-
 permissions:
   contents: write
 
@@ -20,7 +17,7 @@ jobs:
       monitor_run_id: ${{ steps.ids.outputs.monitor_run_id }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Compute run ids
         id: ids
@@ -84,7 +81,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Verify monitor sidecar exists on bench-data
         run: |

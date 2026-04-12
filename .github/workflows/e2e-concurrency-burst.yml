@@ -3,9 +3,6 @@ name: e2e-concurrency-burst
 on:
   workflow_dispatch:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
-
 permissions:
   contents: write
 
@@ -23,7 +20,7 @@ jobs:
         shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Generate shard benchmark fixture
         run: |
@@ -50,7 +47,7 @@ jobs:
     needs: stash-burst
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Aggregate burst writes
         uses: strawgate/o11ykit/octo11y/actions/aggregate@main-dist

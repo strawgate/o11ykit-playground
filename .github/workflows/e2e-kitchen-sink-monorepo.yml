@@ -3,9 +3,6 @@ name: e2e-kitchen-sink-monorepo
 on:
   workflow_dispatch:
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
-
 permissions:
   contents: write
   actions: read
@@ -41,7 +38,7 @@ jobs:
       auto_run_id: ${{ steps.ids.outputs.auto_run_id }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Compute run id
         id: ids
@@ -88,7 +85,7 @@ jobs:
             pattern: .bench/otlp/*.json
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Compute run ids
         id: ids
@@ -277,7 +274,7 @@ jobs:
     needs: stash-format-matrix
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Write candidate benchmark
         run: |
@@ -313,7 +310,7 @@ jobs:
       - compare-go-candidate
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Aggregate
         uses: strawgate/o11ykit/octo11y/actions/aggregate@main-dist

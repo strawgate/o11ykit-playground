@@ -9,9 +9,6 @@ on:
         default: "codex/issue-38-metrics-dir"
         type: string
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
-
 permissions:
   contents: write
   actions: read
@@ -30,10 +27,10 @@ jobs:
       metrics_only_run_id: ${{ steps.ids.outputs.metrics_only_run_id }}
     steps:
       - name: Checkout playground
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Checkout o11ykit canary ref
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: strawgate/o11ykit
           ref: ${{ inputs.o11ykit-ref }}
@@ -194,7 +191,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout playground
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Verify bench-data artifacts from canary run
         env:
