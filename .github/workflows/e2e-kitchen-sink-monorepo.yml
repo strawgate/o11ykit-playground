@@ -94,7 +94,8 @@ jobs:
           echo "bench_run_id=${PREFIX}--${{ matrix.id }}" >> "$GITHUB_OUTPUT"
           echo "monitor_run_id=${PREFIX}--${{ matrix.id }}--monitor" >> "$GITHUB_OUTPUT"
 
-      - name: Start monitor
+      - name: Start monitor (go lane)
+        if: matrix.id == 'go'
         id: monitor
         uses: strawgate/o11ykit/octo11y/actions/monitor@main-dist
         with:
@@ -104,7 +105,8 @@ jobs:
           run-id: ${{ steps.ids.outputs.monitor_run_id }}
           github-token: ${{ github.token }}
 
-      - name: Emit one custom metric
+      - name: Emit one custom metric (go lane)
+        if: matrix.id == 'go'
         uses: strawgate/o11ykit/octo11y/actions/emit-metric@main-dist
         with:
           otlp-http-endpoint: ${{ steps.monitor.outputs.otlp-http-endpoint }}
@@ -114,141 +116,149 @@ jobs:
           scenario: kitchen-sink
           series: ${{ matrix.id }}
 
-      - name: Generate ${{ matrix.id }} fixtures
+      - name: Generate go fixtures
+        if: matrix.id == 'go'
         run: |
-          mkdir -p ".bench/${{ matrix.id }}"
-          case "${{ matrix.id }}" in
-            go)
-              cat > .bench/go/core.txt <<'GO'
-              goos: linux
-              goarch: amd64
-              cpu: synthetic
-              BenchmarkKitchen/go-core-8      2100000  680 ns/op   24 B/op  1 allocs/op
-              GO
-              cat > .bench/go/io.txt <<'GO'
-              goos: linux
-              goarch: amd64
-              cpu: synthetic
-              BenchmarkKitchen/go-io-8        1200000  990 ns/op   48 B/op  2 allocs/op
-              GO
-              ;;
-            rust)
-              cat > .bench/rust/core.txt <<'RUST'
-              test bench_kitchen_rust_core ... bench:      1,240 ns/iter (+/- 120)
-              test bench_kitchen_rust_alloc ... bench:      1,560 ns/iter (+/- 140)
-              RUST
-              ;;
-            hyperfine)
-              cat > .bench/hyperfine/cli.json <<'HYP'
+          mkdir -p ".bench/go"
+          cat > .bench/go/core.txt <<'GO'
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkKitchen/go-core-8      2100000  680 ns/op   24 B/op  1 allocs/op
+          GO
+          cat > .bench/go/io.txt <<'GO'
+          goos: linux
+          goarch: amd64
+          cpu: synthetic
+          BenchmarkKitchen/go-io-8        1200000  990 ns/op   48 B/op  2 allocs/op
+          GO
+
+      - name: Generate rust fixtures
+        if: matrix.id == 'rust'
+        run: |
+          mkdir -p ".bench/rust"
+          cat > .bench/rust/core.txt <<'RUST'
+          test bench_kitchen_rust_core ... bench:      1,240 ns/iter (+/- 120)
+          test bench_kitchen_rust_alloc ... bench:      1,560 ns/iter (+/- 140)
+          RUST
+
+      - name: Generate hyperfine fixtures
+        if: matrix.id == 'hyperfine'
+        run: |
+          mkdir -p ".bench/hyperfine"
+          cat > .bench/hyperfine/cli.json <<'HYP'
+          {
+            "results": [
               {
-                "results": [
-                  {
-                    "command": "kitchen-cli-a",
-                    "mean": 0.241,
-                    "stddev": 0.007,
-                    "median": 0.240,
-                    "min": 0.231,
-                    "max": 0.259,
-                    "times": [0.231, 0.240, 0.259]
-                  },
-                  {
-                    "command": "kitchen-cli-b",
-                    "mean": 0.318,
-                    "stddev": 0.009,
-                    "median": 0.316,
-                    "min": 0.305,
-                    "max": 0.337,
-                    "times": [0.305, 0.316, 0.337]
-                  }
-                ]
-              }
-              HYP
-              ;;
-            pytest)
-              cat > .bench/pytest/suite.json <<'PYTEST'
+                "command": "kitchen-cli-a",
+                "mean": 0.241,
+                "stddev": 0.007,
+                "median": 0.240,
+                "min": 0.231,
+                "max": 0.259,
+                "times": [0.231, 0.240, 0.259]
+              },
               {
-                "benchmarks": [
-                  {
-                    "name": "bench_kitchen_pytest_a",
-                    "fullname": "tests/bench/test_kitchen.py::bench_kitchen_pytest_a",
-                    "stats": {
-                      "min": 0.0011,
-                      "max": 0.0017,
-                      "mean": 0.0014,
-                      "stddev": 0.0002,
-                      "median": 0.0014,
-                      "iqr": 0.0001,
-                      "ops": 714.2,
-                      "rounds": 1000,
-                      "iterations": 1
-                    }
-                  }
-                ]
+                "command": "kitchen-cli-b",
+                "mean": 0.318,
+                "stddev": 0.009,
+                "median": 0.316,
+                "min": 0.305,
+                "max": 0.337,
+                "times": [0.305, 0.316, 0.337]
               }
-              PYTEST
-              ;;
-            benchmark-action)
-              cat > .bench/benchmark-action/feed.json <<'ACTION'
-              [
-                {
-                  "name": "kitchen_action_a",
-                  "unit": "ns/op",
-                  "value": 812,
-                  "context": "ignored"
-                },
-                {
-                  "name": "kitchen_action_b",
-                  "unit": "ns/op",
-                  "value": 935
+            ]
+          }
+          HYP
+
+      - name: Generate pytest fixtures
+        if: matrix.id == 'pytest'
+        run: |
+          mkdir -p ".bench/pytest"
+          cat > .bench/pytest/suite.json <<'PYTEST'
+          {
+            "benchmarks": [
+              {
+                "name": "bench_kitchen_pytest_a",
+                "fullname": "tests/bench/test_kitchen.py::bench_kitchen_pytest_a",
+                "stats": {
+                  "min": 0.0011,
+                  "max": 0.0017,
+                  "mean": 0.0014,
+                  "stddev": 0.0002,
+                  "median": 0.0014,
+                  "iqr": 0.0001,
+                  "ops": 714.2,
+                  "rounds": 1000,
+                  "iterations": 1
                 }
-              ]
-              ACTION
-              ;;
-            otlp)
-              cat > .bench/otlp/direct.json <<'OTLP'
+              }
+            ]
+          }
+          PYTEST
+
+      - name: Generate benchmark-action fixtures
+        if: matrix.id == 'benchmark-action'
+        run: |
+          mkdir -p ".bench/benchmark-action"
+          cat > .bench/benchmark-action/feed.json <<'ACTION'
+          [
+            {
+              "name": "kitchen_action_a",
+              "unit": "ns/op",
+              "value": 812,
+              "context": "ignored"
+            },
+            {
+              "name": "kitchen_action_b",
+              "unit": "ns/op",
+              "value": 935
+            }
+          ]
+          ACTION
+
+      - name: Generate otlp fixtures
+        if: matrix.id == 'otlp'
+        run: |
+          mkdir -p ".bench/otlp"
+          cat > .bench/otlp/direct.json <<'OTLP'
+          {
+            "resourceMetrics": [
               {
-                "resourceMetrics": [
+                "resource": {
+                  "attributes": [
+                    { "key": "benchkit.run_id", "value": { "stringValue": "kitchen-otlp-direct" } },
+                    { "key": "benchkit.kind", "value": { "stringValue": "workflow" } },
+                    { "key": "benchkit.source_format", "value": { "stringValue": "otlp" } }
+                  ]
+                },
+                "scopeMetrics": [
                   {
-                    "resource": {
-                      "attributes": [
-                        { "key": "benchkit.run_id", "value": { "stringValue": "kitchen-otlp-direct" } },
-                        { "key": "benchkit.kind", "value": { "stringValue": "workflow" } },
-                        { "key": "benchkit.source_format", "value": { "stringValue": "otlp" } }
-                      ]
-                    },
-                    "scopeMetrics": [
+                    "metrics": [
                       {
-                        "metrics": [
-                          {
-                            "name": "kitchen_direct_metric",
-                            "unit": "ms",
-                            "gauge": {
-                              "dataPoints": [
-                                {
-                                  "attributes": [
-                                    { "key": "benchkit.scenario", "value": { "stringValue": "kitchen-direct" } },
-                                    { "key": "benchkit.series", "value": { "stringValue": "otlp" } },
-                                    { "key": "benchkit.metric.direction", "value": { "stringValue": "smaller_is_better" } }
-                                  ],
-                                  "timeUnixNano": "1711929600000000000",
-                                  "asDouble": 42.5
-                                }
-                              ]
+                        "name": "kitchen_direct_metric",
+                        "unit": "ms",
+                        "gauge": {
+                          "dataPoints": [
+                            {
+                              "attributes": [
+                                { "key": "benchkit.scenario", "value": { "stringValue": "kitchen-direct" } },
+                                { "key": "benchkit.series", "value": { "stringValue": "otlp" } },
+                                { "key": "benchkit.metric.direction", "value": { "stringValue": "smaller_is_better" } }
+                              ],
+                              "timeUnixNano": "1711929600000000000",
+                              "asDouble": 42.5
                             }
-                          }
-                        ]
+                          ]
+                        }
                       }
                     ]
                   }
                 ]
               }
-              OTLP
-              ;;
-            *)
-              echo "unsupported matrix id: ${{ matrix.id }}"
-              exit 1
-              ;;
-          esac
+            ]
+          }
+          OTLP
 
       - name: Parse and stash ${{ matrix.id }}
         uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
@@ -321,12 +331,13 @@ jobs:
 
           for ID in go rust hyperfine pytest benchmark-action otlp; do
             RUN_PATH="data/runs/${PREFIX}--${ID}/benchmark.otlp.json"
-            SIDE_PATH="data/runs/${PREFIX}--${ID}--monitor/telemetry.otlp.jsonl.gz"
             echo "checking ${RUN_PATH}"
             git ls-tree -r --name-only bench-data | grep -Fx "${RUN_PATH}"
-            echo "checking ${SIDE_PATH}"
-            git ls-tree -r --name-only bench-data | grep -Fx "${SIDE_PATH}"
           done
+
+          GO_SIDE="data/runs/${PREFIX}--go--monitor/telemetry.otlp.jsonl.gz"
+          echo "checking ${GO_SIDE}"
+          git ls-tree -r --name-only bench-data | grep -Fx "${GO_SIDE}"
 
           git ls-tree -r --name-only bench-data | grep -Fx "data/index.json"
           git ls-tree -r --name-only bench-data | grep -E '^data/views/runs/.+\.json$' >/dev/null
