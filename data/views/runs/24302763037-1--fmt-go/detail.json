@@ -1,0 +1,91 @@
+{
+  "run": {
+    "id": "24302763037-1--fmt-go",
+    "timestamp": "2026-04-12T08:46:04.165Z",
+    "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+    "ref": "refs/heads/main",
+    "benchmarks": 2,
+    "metrics": [
+      "allocs_per_op",
+      "bytes_per_op",
+      "ns_per_op"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "allocs_per_op",
+      "unit": "allocs/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkFmt/go-json [procs=8]",
+          "value": 1,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkFmt/go-parse [procs=8]",
+          "value": 2,
+          "unit": "allocs/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "bytes_per_op",
+      "unit": "B/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkFmt/go-json [procs=8]",
+          "value": 24,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkFmt/go-parse [procs=8]",
+          "value": 40,
+          "unit": "B/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "ns_per_op",
+      "unit": "ns/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "BenchmarkFmt/go-json [procs=8]",
+          "value": 640,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        },
+        {
+          "name": "BenchmarkFmt/go-parse [procs=8]",
+          "value": 810,
+          "unit": "ns/op",
+          "direction": "smaller_is_better",
+          "tags": {
+            "procs": "8"
+          }
+        }
+      ]
+    }
+  ]
+}

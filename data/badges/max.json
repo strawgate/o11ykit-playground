@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "max",
-  "message": "0 s",
-  "color": "brightgreen"
+  "message": "0.27 s",
+  "color": "red"
 }

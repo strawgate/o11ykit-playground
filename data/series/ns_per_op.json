@@ -593,6 +593,32 @@
           "run_id": "kitchen-24302746788-1--auto"
         }
       ]
+    },
+    "BenchmarkFmt/go-json [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:04.165Z",
+          "value": 640,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "24302763037-1--fmt-go"
+        }
+      ]
+    },
+    "BenchmarkFmt/go-parse [procs=8]": {
+      "tags": {
+        "procs": "8"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:04.165Z",
+          "value": 810,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "24302763037-1--fmt-go"
+        }
+      ]
     }
   }
 }

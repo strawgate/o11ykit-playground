@@ -22,6 +22,26 @@
           "run_id": "kitchen-24302746788-1--rust"
         }
       ]
+    },
+    "bench_fmt_rust_a": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:03.701Z",
+          "value": 1240,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "24302763037-1--fmt-rust"
+        }
+      ]
+    },
+    "bench_fmt_rust_b": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:03.701Z",
+          "value": 1560,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "24302763037-1--fmt-rust"
+        }
+      ]
     }
   }
 }

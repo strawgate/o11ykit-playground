@@ -32,6 +32,46 @@
           "run_id": "kitchen-24302746788-1--pytest"
         }
       ]
+    },
+    "bench_fmt_pytest_a": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:03.527Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "24302763037-1--fmt-pytest"
+        }
+      ]
+    },
+    "bench_fmt_pytest_b": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:03.527Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "24302763037-1--fmt-pytest"
+        }
+      ]
+    },
+    "fmt-hyperfine-a": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:05.248Z",
+          "value": 0.23,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "24302763037-1--fmt-hyperfine"
+        }
+      ]
+    },
+    "fmt-hyperfine-b": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:05.248Z",
+          "value": 0.28,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "24302763037-1--fmt-hyperfine"
+        }
+      ]
     }
   }
 }

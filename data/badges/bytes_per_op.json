@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "bytes per op",
-  "message": "52 B/op",
-  "color": "blue"
+  "message": "32 B/op",
+  "color": "brightgreen"
 }

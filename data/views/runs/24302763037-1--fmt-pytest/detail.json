@@ -1,0 +1,150 @@
+{
+  "run": {
+    "id": "24302763037-1--fmt-pytest",
+    "timestamp": "2026-04-12T08:46:03.527Z",
+    "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+    "ref": "refs/heads/main",
+    "benchmarks": 2,
+    "metrics": [
+      "max",
+      "mean",
+      "median",
+      "min",
+      "ops",
+      "rounds",
+      "stddev"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "max",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "bench_fmt_pytest_a",
+          "value": 0.0018,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "bench_fmt_pytest_b",
+          "value": 0.0021,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "mean",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "bench_fmt_pytest_a",
+          "value": 0.0015,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "bench_fmt_pytest_b",
+          "value": 0.0019,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "median",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "bench_fmt_pytest_a",
+          "value": 0.0015,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "bench_fmt_pytest_b",
+          "value": 0.0019,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "min",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "bench_fmt_pytest_a",
+          "value": 0.0012,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "bench_fmt_pytest_b",
+          "value": 0.0016,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "ops",
+      "unit": "ops/s",
+      "direction": "bigger_is_better",
+      "values": [
+        {
+          "name": "bench_fmt_pytest_a",
+          "value": 666.6,
+          "unit": "ops/s",
+          "direction": "bigger_is_better"
+        },
+        {
+          "name": "bench_fmt_pytest_b",
+          "value": 526.3,
+          "unit": "ops/s",
+          "direction": "bigger_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "rounds",
+      "direction": "bigger_is_better",
+      "values": [
+        {
+          "name": "bench_fmt_pytest_a",
+          "value": 1000,
+          "direction": "bigger_is_better"
+        },
+        {
+          "name": "bench_fmt_pytest_b",
+          "value": 1000,
+          "direction": "bigger_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "stddev",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "bench_fmt_pytest_a",
+          "value": 0.0002,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "bench_fmt_pytest_b",
+          "value": 0.0002,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    }
+  ]
+}

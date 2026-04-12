@@ -1,0 +1,33 @@
+{
+  "run": {
+    "id": "24302763037-1--fmt-benchmark-action",
+    "timestamp": "2026-04-12T08:46:04.077Z",
+    "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+    "ref": "refs/heads/main",
+    "benchmarks": 2,
+    "metrics": [
+      "value"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "value",
+      "unit": "ns/op",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "fmt_action_a",
+          "value": 712,
+          "unit": "ns/op",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "fmt_action_b",
+          "value": 845,
+          "unit": "ns/op",
+          "direction": "smaller_is_better"
+        }
+      ]
+    }
+  ]
+}

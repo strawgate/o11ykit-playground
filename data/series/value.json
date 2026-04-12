@@ -22,6 +22,26 @@
           "run_id": "kitchen-24302746788-1--benchmark-action"
         }
       ]
+    },
+    "fmt_action_a": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:04.077Z",
+          "value": 712,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "24302763037-1--fmt-benchmark-action"
+        }
+      ]
+    },
+    "fmt_action_b": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:46:04.077Z",
+          "value": 845,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "24302763037-1--fmt-benchmark-action"
+        }
+      ]
     }
   }
 }

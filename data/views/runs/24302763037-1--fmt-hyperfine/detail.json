@@ -1,0 +1,113 @@
+{
+  "run": {
+    "id": "24302763037-1--fmt-hyperfine",
+    "timestamp": "2026-04-12T08:46:05.248Z",
+    "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+    "ref": "refs/heads/main",
+    "benchmarks": 2,
+    "metrics": [
+      "max",
+      "mean",
+      "median",
+      "min",
+      "stddev"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "max",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "fmt-hyperfine-a",
+          "value": 0.242,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "fmt-hyperfine-b",
+          "value": 0.299,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "mean",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "fmt-hyperfine-a",
+          "value": 0.231,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "fmt-hyperfine-b",
+          "value": 0.287,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "median",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "fmt-hyperfine-a",
+          "value": 0.229,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "fmt-hyperfine-b",
+          "value": 0.285,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "min",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "fmt-hyperfine-a",
+          "value": 0.225,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "fmt-hyperfine-b",
+          "value": 0.279,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "stddev",
+      "unit": "s",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "fmt-hyperfine-a",
+          "value": 0.005,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        },
+        {
+          "name": "fmt-hyperfine-b",
+          "value": 0.006,
+          "unit": "s",
+          "direction": "smaller_is_better"
+        }
+      ]
+    }
+  ]
+}

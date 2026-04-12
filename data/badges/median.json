@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "median",
-  "message": "0 s",
-  "color": "brightgreen"
+  "message": "0.26 s",
+  "color": "red"
 }

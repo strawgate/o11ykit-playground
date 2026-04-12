@@ -1,15 +1,15 @@
 [
   {
     "metric": "allocs_per_op",
-    "latestSeriesCount": 11,
-    "latestRunId": "kitchen-24302746788-1--auto",
-    "latestTimestamp": "2026-04-12T08:45:30.666Z"
+    "latestSeriesCount": 13,
+    "latestRunId": "24302763037-1--fmt-go",
+    "latestTimestamp": "2026-04-12T08:46:04.165Z"
   },
   {
     "metric": "bytes_per_op",
-    "latestSeriesCount": 11,
-    "latestRunId": "kitchen-24302746788-1--auto",
-    "latestTimestamp": "2026-04-12T08:45:30.666Z"
+    "latestSeriesCount": 13,
+    "latestRunId": "24302763037-1--fmt-go",
+    "latestTimestamp": "2026-04-12T08:46:04.165Z"
   },
   {
     "metric": "fallback_file_metric",
@@ -43,39 +43,39 @@
   },
   {
     "metric": "max",
-    "latestSeriesCount": 3,
-    "latestRunId": "kitchen-24302746788-1--pytest",
-    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+    "latestSeriesCount": 7,
+    "latestRunId": "24302763037-1--fmt-hyperfine",
+    "latestTimestamp": "2026-04-12T08:46:05.248Z"
   },
   {
     "metric": "mean",
-    "latestSeriesCount": 3,
-    "latestRunId": "kitchen-24302746788-1--pytest",
-    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+    "latestSeriesCount": 7,
+    "latestRunId": "24302763037-1--fmt-hyperfine",
+    "latestTimestamp": "2026-04-12T08:46:05.248Z"
   },
   {
     "metric": "median",
-    "latestSeriesCount": 3,
-    "latestRunId": "kitchen-24302746788-1--pytest",
-    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+    "latestSeriesCount": 7,
+    "latestRunId": "24302763037-1--fmt-hyperfine",
+    "latestTimestamp": "2026-04-12T08:46:05.248Z"
   },
   {
     "metric": "min",
-    "latestSeriesCount": 3,
-    "latestRunId": "kitchen-24302746788-1--pytest",
-    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+    "latestSeriesCount": 7,
+    "latestRunId": "24302763037-1--fmt-hyperfine",
+    "latestTimestamp": "2026-04-12T08:46:05.248Z"
   },
   {
     "metric": "ns_per_iter",
-    "latestSeriesCount": 2,
-    "latestRunId": "kitchen-24302746788-1--rust",
-    "latestTimestamp": "2026-04-12T08:45:06.820Z"
+    "latestSeriesCount": 4,
+    "latestRunId": "24302763037-1--fmt-rust",
+    "latestTimestamp": "2026-04-12T08:46:03.701Z"
   },
   {
     "metric": "ns_per_op",
-    "latestSeriesCount": 11,
-    "latestRunId": "kitchen-24302746788-1--auto",
-    "latestTimestamp": "2026-04-12T08:45:30.666Z"
+    "latestSeriesCount": 13,
+    "latestRunId": "24302763037-1--fmt-go",
+    "latestTimestamp": "2026-04-12T08:46:04.165Z"
   },
   {
     "metric": "open_issues",
@@ -91,15 +91,15 @@
   },
   {
     "metric": "ops",
-    "latestSeriesCount": 1,
-    "latestRunId": "kitchen-24302746788-1--pytest",
-    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+    "latestSeriesCount": 3,
+    "latestRunId": "24302763037-1--fmt-pytest",
+    "latestTimestamp": "2026-04-12T08:46:03.527Z"
   },
   {
     "metric": "rounds",
-    "latestSeriesCount": 1,
-    "latestRunId": "kitchen-24302746788-1--pytest",
-    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+    "latestSeriesCount": 3,
+    "latestRunId": "24302763037-1--fmt-pytest",
+    "latestTimestamp": "2026-04-12T08:46:03.527Z"
   },
   {
     "metric": "stars",
@@ -109,15 +109,15 @@
   },
   {
     "metric": "stddev",
-    "latestSeriesCount": 3,
-    "latestRunId": "kitchen-24302746788-1--pytest",
-    "latestTimestamp": "2026-04-12T08:45:08.277Z"
+    "latestSeriesCount": 7,
+    "latestRunId": "24302763037-1--fmt-hyperfine",
+    "latestTimestamp": "2026-04-12T08:46:05.248Z"
   },
   {
     "metric": "value",
-    "latestSeriesCount": 2,
-    "latestRunId": "kitchen-24302746788-1--benchmark-action",
-    "latestTimestamp": "2026-04-12T08:45:04.873Z"
+    "latestSeriesCount": 4,
+    "latestRunId": "24302763037-1--fmt-benchmark-action",
+    "latestTimestamp": "2026-04-12T08:46:04.077Z"
   },
   {
     "metric": "workflow_success_pct",
