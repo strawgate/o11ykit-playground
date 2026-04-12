@@ -1,0 +1,111 @@
+{
+  "run": {
+    "id": "24302877985-1--repo-stats",
+    "timestamp": "2026-04-12T08:52:38.495Z",
+    "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+    "ref": "refs/heads/main",
+    "benchmarks": 1,
+    "metrics": [
+      "forks",
+      "lang_bytes_html",
+      "lang_bytes_typescript",
+      "open_issues",
+      "open_prs",
+      "stars",
+      "workflow_success_pct"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "forks",
+      "unit": "count",
+      "direction": "bigger_is_better",
+      "values": [
+        {
+          "name": "o11ykit-playground",
+          "value": 0,
+          "unit": "count",
+          "direction": "bigger_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "lang_bytes_html",
+      "unit": "bytes",
+      "direction": "bigger_is_better",
+      "values": [
+        {
+          "name": "o11ykit-playground",
+          "value": 355,
+          "unit": "bytes",
+          "direction": "bigger_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "lang_bytes_typescript",
+      "unit": "bytes",
+      "direction": "bigger_is_better",
+      "values": [
+        {
+          "name": "o11ykit-playground",
+          "value": 1950,
+          "unit": "bytes",
+          "direction": "bigger_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "open_issues",
+      "unit": "count",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "o11ykit-playground",
+          "value": 0,
+          "unit": "count",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "open_prs",
+      "unit": "count",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "o11ykit-playground",
+          "value": 0,
+          "unit": "count",
+          "direction": "smaller_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "stars",
+      "unit": "count",
+      "direction": "bigger_is_better",
+      "values": [
+        {
+          "name": "o11ykit-playground",
+          "value": 0,
+          "unit": "count",
+          "direction": "bigger_is_better"
+        }
+      ]
+    },
+    {
+      "metric": "workflow_success_pct",
+      "unit": "%",
+      "direction": "bigger_is_better",
+      "values": [
+        {
+          "name": "o11ykit-playground",
+          "value": 73.3,
+          "unit": "%",
+          "direction": "bigger_is_better"
+        }
+      ]
+    }
+  ]
+}
