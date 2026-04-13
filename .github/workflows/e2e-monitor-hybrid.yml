@@ -87,9 +87,6 @@ jobs:
           print("workload checksum", total)
           PY
 
-      - name: Allow monitor scrape and flush window
-        run: sleep 5
-
   aggregate-and-verify:
     runs-on: ubuntu-latest
     needs: capture-monitor-sidecar
