@@ -37,7 +37,7 @@ jobs:
           path: .o11ykit
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 24
 
@@ -87,6 +87,9 @@ jobs:
           print("workload checksum", total)
           PY
 
+      - name: Allow monitor scrape and flush window
+        run: sleep 5
+
   aggregate-and-verify:
     runs-on: ubuntu-latest
     needs: capture-monitor-sidecar
@@ -105,7 +108,7 @@ jobs:
           path: .o11ykit
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 24
 
@@ -135,21 +138,33 @@ jobs:
           echo "checking ${SIDE}"
           git ls-tree -r --name-only bench-data | grep -Fx "${SIDE}"
 
-          git show bench-data:data/index.json > index.json
+          DETAIL="data/views/runs/${RUN_ID}/detail.json"
+          git ls-tree -r --name-only bench-data | grep -Fx "${DETAIL}"
+          git show "bench-data:${DETAIL}" > detail.json
+          git show bench-data:data/index/metrics.json > metrics.json
+
           node -e '
             const fs = require("node:fs");
             const runId = process.env.RUN_ID;
-            const index = JSON.parse(fs.readFileSync("index.json", "utf8"));
-            const run = index.runs.find((entry) => entry.id === runId);
-            if (!run) {
-              throw new Error(`run ${runId} not found in data/index.json`);
+            const detail = JSON.parse(fs.readFileSync("detail.json", "utf8"));
+            const snapshots = Array.isArray(detail.metricSnapshots) ? detail.metricSnapshots : [];
+            const monitorMetrics = snapshots.filter((entry) => String(entry.metric || "").startsWith("_monitor/"));
+            const customMetric = snapshots.find((entry) => entry.metric === "monitor_story_score");
+            if (!customMetric) {
+              throw new Error(`run ${runId} missing monitor_story_score in detail metricSnapshots`);
             }
-            const monitorMetrics = (run.metrics || []).filter((name) => String(name).startsWith("_monitor/"));
             if (monitorMetrics.length === 0) {
-              throw new Error(`run ${runId} has no _monitor/ metrics in index`);
+              throw new Error(`run ${runId} has no _monitor/ metrics in detail metricSnapshots`);
             }
-            console.log(`run ${runId} monitor metric count: ${monitorMetrics.length}`);
-            console.log(`sample metrics: ${monitorMetrics.slice(0, 8).join(", ")}`);
+            const metricsIndex = JSON.parse(fs.readFileSync("metrics.json", "utf8"));
+            const monitorIndexEntries = metricsIndex.filter((entry) => String(entry.metric || "").startsWith("_monitor/"));
+            if (monitorIndexEntries.length === 0) {
+              throw new Error("data/index/metrics.json has no _monitor/ entries");
+            }
+            console.log(`run ${runId} metricSnapshots count: ${snapshots.length}`);
+            console.log(`run ${runId} monitor metricSnapshots count: ${monitorMetrics.length}`);
+            console.log(`monitor metric samples: ${monitorMetrics.slice(0, 8).map((m) => m.metric).join(", ")}`);
+            console.log(`index monitor metric count: ${monitorIndexEntries.length}`);
           '
 
       - name: Ergonomics summary
