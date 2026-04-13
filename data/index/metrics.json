@@ -1,5 +1,59 @@
 [
   {
+    "metric": "_monitor/process.cpu.time",
+    "latestSeriesCount": 3,
+    "latestRunId": "monitor-24302867178-1",
+    "latestTimestamp": "2026-04-12T08:52:10.474Z"
+  },
+  {
+    "metric": "_monitor/process.disk.io",
+    "latestSeriesCount": 2,
+    "latestRunId": "monitor-24302867178-1",
+    "latestTimestamp": "2026-04-12T08:52:10.474Z"
+  },
+  {
+    "metric": "_monitor/process.memory.usage",
+    "latestSeriesCount": 1,
+    "latestRunId": "monitor-24302867178-1",
+    "latestTimestamp": "2026-04-12T08:52:10.474Z"
+  },
+  {
+    "metric": "_monitor/process.memory.virtual",
+    "latestSeriesCount": 1,
+    "latestRunId": "monitor-24302867178-1",
+    "latestTimestamp": "2026-04-12T08:52:10.474Z"
+  },
+  {
+    "metric": "_monitor/system.cpu.load_average.15m",
+    "latestSeriesCount": 1,
+    "latestRunId": "monitor-24302867178-1",
+    "latestTimestamp": "2026-04-12T08:52:10.474Z"
+  },
+  {
+    "metric": "_monitor/system.cpu.load_average.1m",
+    "latestSeriesCount": 1,
+    "latestRunId": "monitor-24302867178-1",
+    "latestTimestamp": "2026-04-12T08:52:10.474Z"
+  },
+  {
+    "metric": "_monitor/system.cpu.load_average.5m",
+    "latestSeriesCount": 1,
+    "latestRunId": "monitor-24302867178-1",
+    "latestTimestamp": "2026-04-12T08:52:10.474Z"
+  },
+  {
+    "metric": "_monitor/system.cpu.time",
+    "latestSeriesCount": 32,
+    "latestRunId": "monitor-24302867178-1",
+    "latestTimestamp": "2026-04-12T08:52:10.474Z"
+  },
+  {
+    "metric": "_monitor/system.memory.usage",
+    "latestSeriesCount": 6,
+    "latestRunId": "monitor-24302867178-1",
+    "latestTimestamp": "2026-04-12T08:52:10.474Z"
+  },
+  {
     "metric": "allocs_per_op",
     "latestSeriesCount": 26,
     "latestRunId": "24309453851-1--candidate",
@@ -22,6 +76,12 @@
     "latestSeriesCount": 1,
     "latestRunId": "24309449499-1--repo-stats",
     "latestTimestamp": "2026-04-12T14:57:13.382Z"
+  },
+  {
+    "metric": "kitchen_custom_metric",
+    "latestSeriesCount": 1,
+    "latestRunId": "kitchen-24302746788-1--go--monitor",
+    "latestTimestamp": "2026-04-12T08:45:08.222Z"
   },
   {
     "metric": "kitchen_direct_metric",
@@ -72,6 +132,12 @@
     "latestTimestamp": "2026-04-12T08:46:05.248Z"
   },
   {
+    "metric": "monitor_story_score",
+    "latestSeriesCount": 1,
+    "latestRunId": "monitor-only-24319589136-1",
+    "latestTimestamp": "2026-04-13T00:01:40.502Z"
+  },
+  {
     "metric": "ns_per_iter",
     "latestSeriesCount": 4,
     "latestRunId": "24302763037-1--fmt-rust",
@@ -108,6 +174,12 @@
     "latestTimestamp": "2026-04-12T08:46:03.527Z"
   },
   {
+    "metric": "setup_latency_ms",
+    "latestSeriesCount": 2,
+    "latestRunId": "monitor-24302867178-1",
+    "latestTimestamp": "2026-04-12T08:52:10.474Z"
+  },
+  {
     "metric": "stars",
     "latestSeriesCount": 1,
     "latestRunId": "24309449499-1--repo-stats",
@@ -118,6 +190,12 @@
     "latestSeriesCount": 7,
     "latestRunId": "24302763037-1--fmt-hyperfine",
     "latestTimestamp": "2026-04-12T08:46:05.248Z"
+  },
+  {
+    "metric": "throughput_ops_per_s",
+    "latestSeriesCount": 1,
+    "latestRunId": "canary-24302828573-1--monitor",
+    "latestTimestamp": "2026-04-12T08:50:28.088Z"
   },
   {
     "metric": "value",

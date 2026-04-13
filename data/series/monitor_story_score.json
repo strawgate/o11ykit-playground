@@ -1,0 +1,17 @@
+{
+  "metric": "monitor_story_score",
+  "unit": "points",
+  "direction": "bigger_is_better",
+  "series": {
+    "playground-monitor": {
+      "points": [
+        {
+          "timestamp": "2026-04-13T00:01:40.502Z",
+          "value": 73,
+          "commit": "c89e64b51063e716f538422d015e6e24947aea18",
+          "run_id": "monitor-only-24319589136-1"
+        }
+      ]
+    }
+  }
+}

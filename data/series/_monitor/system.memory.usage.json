@@ -1,0 +1,210 @@
+{
+  "metric": "_monitor/system.memory.usage",
+  "unit": "By",
+  "series": {
+    "_monitor/system [state=used]": {
+      "tags": {
+        "state": "used"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 1419406336,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 264712192
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 1243836416,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 1421665280,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 32526336
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 1391003648,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 8556544
+        }
+      ]
+    },
+    "_monitor/system [state=free]": {
+      "tags": {
+        "state": "free"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 11492776960,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 262451200
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 12338806784,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 11495927808,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 29462528
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 12194816000,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 3448832
+        }
+      ]
+    },
+    "_monitor/system [state=buffered]": {
+      "tags": {
+        "state": "buffered"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 88964096,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 401408
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 67993600,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 90528768,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 3891200
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 68259840,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 1523712
+        }
+      ]
+    },
+    "_monitor/system [state=cached]": {
+      "tags": {
+        "state": "cached"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 4178038784,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 4550656
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 3514544128,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 4175511552,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 7368704
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 3508912128,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 4980736
+        }
+      ]
+    },
+    "_monitor/system [state=slab_reclaimable]": {
+      "tags": {
+        "state": "slab_reclaimable"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 195915776,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 475136
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 141451264,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 195961856,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 1908736
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 142465024,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 1191936
+        }
+      ]
+    },
+    "_monitor/system [state=slab_unreclaimable]": {
+      "tags": {
+        "state": "slab_unreclaimable"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 90824192,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 90112
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 84238336,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 92311552,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 319488
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 84312064,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 106496
+        }
+      ]
+    }
+  }
+}

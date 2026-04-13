@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "label": "setup latency ms",
+  "message": "42 ms",
+  "color": "brightgreen"
+}

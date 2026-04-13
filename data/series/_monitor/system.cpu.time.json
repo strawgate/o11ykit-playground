@@ -1,0 +1,1126 @@
+{
+  "metric": "_monitor/system.cpu.time",
+  "unit": "s",
+  "series": {
+    "_monitor/system [cpu=cpu0,state=user]": {
+      "tags": {
+        "cpu": "cpu0",
+        "state": "user"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 20.06,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0.11
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 8.91,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 19.52,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0.42
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 4.19,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0.13
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu0,state=system]": {
+      "tags": {
+        "cpu": "cpu0",
+        "state": "system"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 4.27,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0.03
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 3.18,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 5.19,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0.12
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 3.32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0.08
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu0,state=idle]": {
+      "tags": {
+        "cpu": "cpu0",
+        "state": "idle"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 53.69,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 13.79
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 83.26,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 62.67,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 5.44
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 52.55,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 1.77
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu0,state=interrupt]": {
+      "tags": {
+        "cpu": "cpu0",
+        "state": "interrupt"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu0,state=nice]": {
+      "tags": {
+        "cpu": "cpu0",
+        "state": "nice"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0.01,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0.01,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu0,state=softirq]": {
+      "tags": {
+        "cpu": "cpu0",
+        "state": "softirq"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0.06,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0.05,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0.04,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0.1,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu0,state=steal]": {
+      "tags": {
+        "cpu": "cpu0",
+        "state": "steal"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu0,state=wait]": {
+      "tags": {
+        "cpu": "cpu0",
+        "state": "wait"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 1.87,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 1.06,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0.88,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0.96,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu1,state=user]": {
+      "tags": {
+        "cpu": "cpu1",
+        "state": "user"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 19.47,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0.3
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 4.02,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 20.1,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0.32
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 4.61,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0.1
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu1,state=system]": {
+      "tags": {
+        "cpu": "cpu1",
+        "state": "system"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 4.3,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0.05
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 3.36,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 4.89,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0.15
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 3.29,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0.04
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu1,state=idle]": {
+      "tags": {
+        "cpu": "cpu1",
+        "state": "idle"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 54.2,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 13.6
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 86.76,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 60.97,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 5.52
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 51.78,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 1.84
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu1,state=interrupt]": {
+      "tags": {
+        "cpu": "cpu1",
+        "state": "interrupt"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu1,state=nice]": {
+      "tags": {
+        "cpu": "cpu1",
+        "state": "nice"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu1,state=softirq]": {
+      "tags": {
+        "cpu": "cpu1",
+        "state": "softirq"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0.32,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0.2,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0.25,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0.01
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0.26,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu1,state=steal]": {
+      "tags": {
+        "cpu": "cpu1",
+        "state": "steal"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu1,state=wait]": {
+      "tags": {
+        "cpu": "cpu1",
+        "state": "wait"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 2.61,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0.01
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 1.67,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 2.46,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 1.59,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu2,state=user]": {
+      "tags": {
+        "cpu": "cpu2",
+        "state": "user"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 16.43,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0.12
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 4.56,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 18.05,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0.44
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 8.18,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0.13
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu2,state=system]": {
+      "tags": {
+        "cpu": "cpu2",
+        "state": "system"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 5.2,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0.11
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 3.06,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 4.8,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0.15
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 3.41,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0.05
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu2,state=idle]": {
+      "tags": {
+        "cpu": "cpu2",
+        "state": "idle"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 55.42,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 13.7
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 87.25,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 64.19,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 5.39
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 47.98,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 1.8
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu2,state=interrupt]": {
+      "tags": {
+        "cpu": "cpu2",
+        "state": "interrupt"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu2,state=nice]": {
+      "tags": {
+        "cpu": "cpu2",
+        "state": "nice"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu2,state=softirq]": {
+      "tags": {
+        "cpu": "cpu2",
+        "state": "softirq"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0.08,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0.05,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0.12,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0.06,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu2,state=steal]": {
+      "tags": {
+        "cpu": "cpu2",
+        "state": "steal"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu2,state=wait]": {
+      "tags": {
+        "cpu": "cpu2",
+        "state": "wait"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 1.87,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0.81,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0.64,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 1.36,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu3,state=user]": {
+      "tags": {
+        "cpu": "cpu3",
+        "state": "user"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 20.79,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0.3
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 6.12,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 17.03,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0.47
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 7.67,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0.1
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu3,state=system]": {
+      "tags": {
+        "cpu": "cpu3",
+        "state": "system"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 5.91,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0.1
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 3.01,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 5.23,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0.12
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 3.01,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0.06
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu3,state=idle]": {
+      "tags": {
+        "cpu": "cpu3",
+        "state": "idle"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 52.95,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 13.57
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 85.73,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 65.35,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 5.37
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 49.32,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 1.82
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu3,state=interrupt]": {
+      "tags": {
+        "cpu": "cpu3",
+        "state": "interrupt"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu3,state=nice]": {
+      "tags": {
+        "cpu": "cpu3",
+        "state": "nice"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0.01,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu3,state=softirq]": {
+      "tags": {
+        "cpu": "cpu3",
+        "state": "softirq"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0.02,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0.05,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0.05,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu3,state=steal]": {
+      "tags": {
+        "cpu": "cpu3",
+        "state": "steal"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    },
+    "_monitor/system [cpu=cpu3,state=wait]": {
+      "tags": {
+        "cpu": "cpu3",
+        "state": "wait"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 1.18,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 1.54,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0.81,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 1.92,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    }
+  }
+}

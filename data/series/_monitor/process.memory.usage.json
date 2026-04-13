@@ -1,0 +1,38 @@
+{
+  "metric": "_monitor/process.memory.usage",
+  "unit": "By",
+  "series": {
+    "_monitor/system": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 99973874.53,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 133021696
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 40256170.67,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor",
+          "range": 126001152
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 48934131.81,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 145453056
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 64374491.43,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 128172032
+        }
+      ]
+    }
+  }
+}

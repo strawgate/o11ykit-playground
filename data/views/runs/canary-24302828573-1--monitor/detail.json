@@ -1,0 +1,2564 @@
+{
+  "run": {
+    "id": "canary-24302828573-1--monitor",
+    "timestamp": "2026-04-12T08:50:28.088Z",
+    "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+    "ref": "refs/heads/main",
+    "benchmarks": 2,
+    "metrics": [
+      "_monitor/process.cpu.time",
+      "_monitor/process.disk.io",
+      "_monitor/process.memory.usage",
+      "_monitor/process.memory.virtual",
+      "_monitor/system.cpu.load_average.15m",
+      "_monitor/system.cpu.load_average.1m",
+      "_monitor/system.cpu.load_average.5m",
+      "_monitor/system.cpu.time",
+      "_monitor/system.memory.usage",
+      "setup_latency_ms",
+      "throughput_ops_per_s"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "_monitor/process.cpu.time",
+      "unit": "s",
+      "values": [
+        {
+          "name": "system [state=user]",
+          "value": 3.1,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0.3,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0.12,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0.01,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0.02,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0.01,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 3.38,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0.33,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0.1,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0.02,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0.01,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 3.67,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0.34,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0.11,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0.02,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0.02,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 3.8,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0.35,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0.11,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0.04,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0.02,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [state=user]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [state=system]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [state=wait]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "state": "wait"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "_monitor/process.disk.io",
+      "unit": "By",
+      "values": [
+        {
+          "name": "system [direction=read]",
+          "value": 1371010541,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 1703427944,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 2319982,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 18059,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 11540,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 1007,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 10108,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 0,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 697217,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 425,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 1381483764,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 1706730451,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 2320392,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 18108,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 11011,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 89,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 10108,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 0,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 629450,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 81,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 1387751650,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 1708091697,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 5334765,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 1288982,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 11328,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 95,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 10114,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 0,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 696341,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 84,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 1393851633,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 1709426583,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 5045577,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 1634762,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 11659,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 128,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 10114,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 0,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 705174,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 801,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        },
+        {
+          "name": "system [direction=read]",
+          "value": 31186,
+          "unit": "By",
+          "tags": {
+            "direction": "read"
+          }
+        },
+        {
+          "name": "system [direction=write]",
+          "value": 17469,
+          "unit": "By",
+          "tags": {
+            "direction": "write"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "_monitor/process.memory.usage",
+      "unit": "By",
+      "values": [
+        {
+          "name": "system",
+          "value": 147558400,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 77955072,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 5435392,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 4075520,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 18845696,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 148275200,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 77791232,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 5128192,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 4005888,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 18108416,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 149114880,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 78209024,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 4792320,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 4001792,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 18767872,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 149393408,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 82399232,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 5279744,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 3940352,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 18956288,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 5582848,
+          "unit": "By"
+        }
+      ]
+    },
+    {
+      "metric": "_monitor/process.memory.virtual",
+      "unit": "By",
+      "values": [
+        {
+          "name": "system",
+          "value": 281104560128,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 18866761728,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 29474816,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 11497472,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 117829632,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 281104543744,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 18799652864,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 11558912,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 11497472,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 117002240,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 281104551936,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 18799915008,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 11497472,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 11497472,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 116789248,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 281104547840,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 10204401664,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 12337152,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 11497472,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 117833728,
+          "unit": "By"
+        },
+        {
+          "name": "system",
+          "value": 30158848,
+          "unit": "By"
+        }
+      ]
+    },
+    {
+      "metric": "_monitor/system.cpu.load_average.15m",
+      "unit": "{thread}",
+      "values": [
+        {
+          "name": "system",
+          "value": 0.1,
+          "unit": "{thread}"
+        },
+        {
+          "name": "system",
+          "value": 0.1,
+          "unit": "{thread}"
+        },
+        {
+          "name": "system",
+          "value": 0.1,
+          "unit": "{thread}"
+        },
+        {
+          "name": "system",
+          "value": 0.1,
+          "unit": "{thread}"
+        }
+      ]
+    },
+    {
+      "metric": "_monitor/system.cpu.load_average.1m",
+      "unit": "{thread}",
+      "values": [
+        {
+          "name": "system",
+          "value": 1.07,
+          "unit": "{thread}"
+        },
+        {
+          "name": "system",
+          "value": 1.07,
+          "unit": "{thread}"
+        },
+        {
+          "name": "system",
+          "value": 0.99,
+          "unit": "{thread}"
+        },
+        {
+          "name": "system",
+          "value": 0.99,
+          "unit": "{thread}"
+        }
+      ]
+    },
+    {
+      "metric": "_monitor/system.cpu.load_average.5m",
+      "unit": "{thread}",
+      "values": [
+        {
+          "name": "system",
+          "value": 0.3,
+          "unit": "{thread}"
+        },
+        {
+          "name": "system",
+          "value": 0.3,
+          "unit": "{thread}"
+        },
+        {
+          "name": "system",
+          "value": 0.3,
+          "unit": "{thread}"
+        },
+        {
+          "name": "system",
+          "value": 0.3,
+          "unit": "{thread}"
+        }
+      ]
+    },
+    {
+      "metric": "_monitor/system.cpu.time",
+      "unit": "s",
+      "values": [
+        {
+          "name": "system [cpu=cpu0,state=user]",
+          "value": 19.27,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=system]",
+          "value": 5.13,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=idle]",
+          "value": 59.99,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=nice]",
+          "value": 0.01,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=softirq]",
+          "value": 0.04,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=wait]",
+          "value": 0.88,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=user]",
+          "value": 19.94,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=system]",
+          "value": 4.82,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=idle]",
+          "value": 58.21,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=softirq]",
+          "value": 0.24,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=wait]",
+          "value": 2.46,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=user]",
+          "value": 17.79,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=system]",
+          "value": 4.71,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=idle]",
+          "value": 61.55,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=softirq]",
+          "value": 0.12,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=wait]",
+          "value": 0.64,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=user]",
+          "value": 16.8,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=system]",
+          "value": 5.16,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=idle]",
+          "value": 62.67,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=softirq]",
+          "value": 0.05,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=wait]",
+          "value": 0.81,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=user]",
+          "value": 19.49,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=system]",
+          "value": 5.18,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=idle]",
+          "value": 61.71,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=nice]",
+          "value": 0.01,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=softirq]",
+          "value": 0.04,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=wait]",
+          "value": 0.88,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=user]",
+          "value": 20.05,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=system]",
+          "value": 4.85,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=idle]",
+          "value": 60.06,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=softirq]",
+          "value": 0.24,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=wait]",
+          "value": 2.46,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=user]",
+          "value": 18.01,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=system]",
+          "value": 4.78,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=idle]",
+          "value": 63.26,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=softirq]",
+          "value": 0.12,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=wait]",
+          "value": 0.64,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=user]",
+          "value": 16.91,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=system]",
+          "value": 5.21,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=idle]",
+          "value": 64.49,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=softirq]",
+          "value": 0.05,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=wait]",
+          "value": 0.81,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=user]",
+          "value": 19.61,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=system]",
+          "value": 5.22,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=idle]",
+          "value": 63.55,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=nice]",
+          "value": 0.01,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=softirq]",
+          "value": 0.04,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=wait]",
+          "value": 0.88,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=user]",
+          "value": 20.16,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=system]",
+          "value": 4.92,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=idle]",
+          "value": 61.88,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=softirq]",
+          "value": 0.25,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=wait]",
+          "value": 2.46,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=user]",
+          "value": 18.18,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=system]",
+          "value": 4.83,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=idle]",
+          "value": 65.03,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=softirq]",
+          "value": 0.12,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=wait]",
+          "value": 0.64,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=user]",
+          "value": 17.15,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=system]",
+          "value": 5.27,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=idle]",
+          "value": 66.18,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=softirq]",
+          "value": 0.05,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=wait]",
+          "value": 0.81,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=user]",
+          "value": 19.69,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=system]",
+          "value": 5.25,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=idle]",
+          "value": 65.43,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=nice]",
+          "value": 0.01,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=softirq]",
+          "value": 0.04,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu0,state=wait]",
+          "value": 0.88,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu0",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=user]",
+          "value": 20.26,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=system]",
+          "value": 4.97,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=idle]",
+          "value": 63.73,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=softirq]",
+          "value": 0.25,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu1,state=wait]",
+          "value": 2.46,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu1",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=user]",
+          "value": 18.23,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=system]",
+          "value": 4.86,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=idle]",
+          "value": 66.94,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=softirq]",
+          "value": 0.12,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu2,state=wait]",
+          "value": 0.64,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu2",
+            "state": "wait"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=user]",
+          "value": 17.27,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "user"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=system]",
+          "value": 5.28,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "system"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=idle]",
+          "value": 68.04,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "idle"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=interrupt]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "interrupt"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=nice]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "nice"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=softirq]",
+          "value": 0.05,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "softirq"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=steal]",
+          "value": 0,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "steal"
+          }
+        },
+        {
+          "name": "system [cpu=cpu3,state=wait]",
+          "value": 0.81,
+          "unit": "s",
+          "tags": {
+            "cpu": "cpu3",
+            "state": "wait"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "_monitor/system.memory.usage",
+      "unit": "By",
+      "values": [
+        {
+          "name": "system [state=used]",
+          "value": 1433444352,
+          "unit": "By",
+          "tags": {
+            "state": "used"
+          }
+        },
+        {
+          "name": "system [state=free]",
+          "value": 11489280000,
+          "unit": "By",
+          "tags": {
+            "state": "free"
+          }
+        },
+        {
+          "name": "system [state=buffered]",
+          "value": 88539136,
+          "unit": "By",
+          "tags": {
+            "state": "buffered"
+          }
+        },
+        {
+          "name": "system [state=cached]",
+          "value": 4171489280,
+          "unit": "By",
+          "tags": {
+            "state": "cached"
+          }
+        },
+        {
+          "name": "system [state=slab_reclaimable]",
+          "value": 194793472,
+          "unit": "By",
+          "tags": {
+            "state": "slab_reclaimable"
+          }
+        },
+        {
+          "name": "system [state=slab_unreclaimable]",
+          "value": 92094464,
+          "unit": "By",
+          "tags": {
+            "state": "slab_unreclaimable"
+          }
+        },
+        {
+          "name": "system [state=used]",
+          "value": 1419800576,
+          "unit": "By",
+          "tags": {
+            "state": "used"
+          }
+        },
+        {
+          "name": "system [state=free]",
+          "value": 11499606016,
+          "unit": "By",
+          "tags": {
+            "state": "free"
+          }
+        },
+        {
+          "name": "system [state=buffered]",
+          "value": 89935872,
+          "unit": "By",
+          "tags": {
+            "state": "buffered"
+          }
+        },
+        {
+          "name": "system [state=cached]",
+          "value": 4173996032,
+          "unit": "By",
+          "tags": {
+            "state": "cached"
+          }
+        },
+        {
+          "name": "system [state=slab_reclaimable]",
+          "value": 195899392,
+          "unit": "By",
+          "tags": {
+            "state": "slab_reclaimable"
+          }
+        },
+        {
+          "name": "system [state=slab_unreclaimable]",
+          "value": 92360704,
+          "unit": "By",
+          "tags": {
+            "state": "slab_unreclaimable"
+          }
+        },
+        {
+          "name": "system [state=used]",
+          "value": 1432498176,
+          "unit": "By",
+          "tags": {
+            "state": "used"
+          }
+        },
+        {
+          "name": "system [state=free]",
+          "value": 11482681344,
+          "unit": "By",
+          "tags": {
+            "state": "free"
+          }
+        },
+        {
+          "name": "system [state=buffered]",
+          "value": 91209728,
+          "unit": "By",
+          "tags": {
+            "state": "buffered"
+          }
+        },
+        {
+          "name": "system [state=cached]",
+          "value": 4177702912,
+          "unit": "By",
+          "tags": {
+            "state": "cached"
+          }
+        },
+        {
+          "name": "system [state=slab_reclaimable]",
+          "value": 196452352,
+          "unit": "By",
+          "tags": {
+            "state": "slab_reclaimable"
+          }
+        },
+        {
+          "name": "system [state=slab_unreclaimable]",
+          "value": 92413952,
+          "unit": "By",
+          "tags": {
+            "state": "slab_unreclaimable"
+          }
+        },
+        {
+          "name": "system [state=used]",
+          "value": 1400918016,
+          "unit": "By",
+          "tags": {
+            "state": "used"
+          }
+        },
+        {
+          "name": "system [state=free]",
+          "value": 11512143872,
+          "unit": "By",
+          "tags": {
+            "state": "free"
+          }
+        },
+        {
+          "name": "system [state=buffered]",
+          "value": 92430336,
+          "unit": "By",
+          "tags": {
+            "state": "buffered"
+          }
+        },
+        {
+          "name": "system [state=cached]",
+          "value": 4178857984,
+          "unit": "By",
+          "tags": {
+            "state": "cached"
+          }
+        },
+        {
+          "name": "system [state=slab_reclaimable]",
+          "value": 196702208,
+          "unit": "By",
+          "tags": {
+            "state": "slab_reclaimable"
+          }
+        },
+        {
+          "name": "system [state=slab_unreclaimable]",
+          "value": 92377088,
+          "unit": "By",
+          "tags": {
+            "state": "slab_unreclaimable"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "setup_latency_ms",
+      "unit": "ms",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "baseline [phase=setup]",
+          "value": 44,
+          "unit": "ms",
+          "direction": "smaller_is_better",
+          "tags": {
+            "phase": "setup"
+          }
+        }
+      ]
+    },
+    {
+      "metric": "throughput_ops_per_s",
+      "unit": "ops/s",
+      "direction": "bigger_is_better",
+      "values": [
+        {
+          "name": "baseline [phase=steady-state]",
+          "value": 8123,
+          "unit": "ops/s",
+          "direction": "bigger_is_better",
+          "tags": {
+            "phase": "steady-state"
+          }
+        }
+      ]
+    }
+  ]
+}

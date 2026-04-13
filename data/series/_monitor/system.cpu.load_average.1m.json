@@ -1,0 +1,37 @@
+{
+  "metric": "_monitor/system.cpu.load_average.1m",
+  "unit": "{thread}",
+  "series": {
+    "_monitor/system": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0.66,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0.16
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0.39,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 1.03,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0.08
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0.24,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "label": "throughput ops per s",
+  "message": "8.1k ops/s",
+  "color": "blue"
+}

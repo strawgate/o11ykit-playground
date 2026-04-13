@@ -1,0 +1,111 @@
+{
+  "metric": "_monitor/process.cpu.time",
+  "unit": "s",
+  "series": {
+    "_monitor/system [state=user]": {
+      "tags": {
+        "state": "user"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 1.47,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 3.4
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0.44,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor",
+          "range": 2.46
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0.69,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 3.8
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0.82,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 2.85
+        }
+      ]
+    },
+    "_monitor/system [state=system]": {
+      "tags": {
+        "state": "system"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0.17,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0.4
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0.07,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor",
+          "range": 0.36
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0.07,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0.35
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0.11,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0.35
+        }
+      ]
+    },
+    "_monitor/system [state=wait]": {
+      "tags": {
+        "state": "wait"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 0,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 0,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 0,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 0
+        }
+      ]
+    }
+  }
+}

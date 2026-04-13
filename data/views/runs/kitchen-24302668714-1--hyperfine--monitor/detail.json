@@ -1,0 +1,27 @@
+{
+  "run": {
+    "id": "kitchen-24302668714-1--hyperfine--monitor",
+    "timestamp": "2026-04-12T08:40:33.363Z",
+    "commit": "7c117e34f883510abd777e1c00fe912b43178885",
+    "ref": "refs/heads/main",
+    "benchmarks": 1,
+    "metrics": [
+      "kitchen_custom_metric"
+    ]
+  },
+  "metricSnapshots": [
+    {
+      "metric": "kitchen_custom_metric",
+      "unit": "score",
+      "direction": "smaller_is_better",
+      "values": [
+        {
+          "name": "hyperfine",
+          "value": 12,
+          "unit": "score",
+          "direction": "smaller_is_better"
+        }
+      ]
+    }
+  ]
+}

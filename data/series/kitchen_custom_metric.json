@@ -1,0 +1,29 @@
+{
+  "metric": "kitchen_custom_metric",
+  "unit": "score",
+  "direction": "smaller_is_better",
+  "series": {
+    "kitchen-sink": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:40:33.363Z",
+          "value": 12,
+          "commit": "7c117e34f883510abd777e1c00fe912b43178885",
+          "run_id": "kitchen-24302668714-1--hyperfine--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:40:34.777Z",
+          "value": 12,
+          "commit": "7c117e34f883510abd777e1c00fe912b43178885",
+          "run_id": "kitchen-24302668714-1--rust--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 12,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor"
+        }
+      ]
+    }
+  }
+}

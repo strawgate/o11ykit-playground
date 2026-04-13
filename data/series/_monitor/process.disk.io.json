@@ -1,0 +1,76 @@
+{
+  "metric": "_monitor/process.disk.io",
+  "unit": "By",
+  "series": {
+    "_monitor/system [direction=read]": {
+      "tags": {
+        "direction": "read"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 580454146.42,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 1376831850
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 169570107.67,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor",
+          "range": 1011465600
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 264379221.62,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 1393841525
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 291274868.14,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 1018834418
+        }
+      ]
+    },
+    "_monitor/system [direction=write]": {
+      "tags": {
+        "direction": "write"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 717737747.26,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor",
+          "range": 1704797036
+        },
+        {
+          "timestamp": "2026-04-12T08:45:08.222Z",
+          "value": 218602813.17,
+          "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+          "run_id": "kitchen-24302746788-1--go--monitor",
+          "range": 1310152670
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 325269369.76,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor",
+          "range": 1709426583
+        },
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 374897699.29,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1",
+          "range": 1312393888
+        }
+      ]
+    }
+  }
+}

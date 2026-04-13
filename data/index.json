@@ -2,7 +2,7 @@
   "runs": [
     {
       "id": "bench-24293522265-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.947Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -10,7 +10,7 @@
     },
     {
       "id": "bench-24293475071-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.947Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -18,7 +18,7 @@
     },
     {
       "id": "bench-24293466129-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.947Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -26,7 +26,7 @@
     },
     {
       "id": "bench-24293454249-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.947Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -34,7 +34,7 @@
     },
     {
       "id": "bench-24293437385-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.947Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -42,7 +42,7 @@
     },
     {
       "id": "bench-24293342460-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.946Z",
       "commit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -50,7 +50,7 @@
     },
     {
       "id": "bench-24293325030-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.946Z",
       "commit": "09b95b07e9e8ae07fbc1ebf1e7b04ed90c53907f",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -58,7 +58,7 @@
     },
     {
       "id": "bench-24291900017-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.946Z",
       "commit": "c0e6d8b65285ebb2187a08813ec901daf0e32d7a",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -66,7 +66,7 @@
     },
     {
       "id": "bench-24291861094-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.946Z",
       "commit": "06af35fad930c179ccad05ec8a58686ed7d19f9a",
       "ref": "refs/heads/codex/playground-no-cancel-e2e",
       "benchmarks": 0,
@@ -74,7 +74,7 @@
     },
     {
       "id": "bench-24291818442-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.946Z",
       "commit": "77425d344e7b329539ef1417ebd4234bed227c9a",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -82,7 +82,7 @@
     },
     {
       "id": "bench-24291397788-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.946Z",
       "commit": "77425d344e7b329539ef1417ebd4234bed227c9a",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -90,7 +90,7 @@
     },
     {
       "id": "bench-24287762557-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.945Z",
       "commit": "7ca27a9d392c8a483f560f0346c1b5b8ec2d5eca",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -98,7 +98,7 @@
     },
     {
       "id": "bench-24286863245-1--monitor",
-      "timestamp": "2026-04-12T14:57:36.561Z",
+      "timestamp": "2026-04-13T00:02:07.945Z",
       "commit": "ecca9cd21b0651343835dad8029be073537c5977",
       "ref": "refs/heads/main",
       "benchmarks": 0,
@@ -106,11 +106,21 @@
     },
     {
       "id": "24287668602-1--auto",
-      "timestamp": "2026-04-12T14:57:36.556Z",
+      "timestamp": "2026-04-13T00:02:07.937Z",
       "commit": "9175c59ffa938d7bfba47f9bc7e9a2156279422b",
       "ref": "refs/heads/main",
       "benchmarks": 0,
       "metrics": []
+    },
+    {
+      "id": "monitor-only-24319589136-1",
+      "timestamp": "2026-04-13T00:01:40.502Z",
+      "commit": "c89e64b51063e716f538422d015e6e24947aea18",
+      "ref": "refs/heads/codex/monitor-sidecar-ergonomics",
+      "benchmarks": 1,
+      "metrics": [
+        "monitor_story_score"
+      ]
     },
     {
       "id": "24309453851-1--candidate",
@@ -197,6 +207,25 @@
       ]
     },
     {
+      "id": "monitor-24302867178-1",
+      "timestamp": "2026-04-12T08:52:10.474Z",
+      "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+      "ref": "refs/heads/main",
+      "benchmarks": 2,
+      "metrics": [
+        "_monitor/process.cpu.time",
+        "_monitor/process.disk.io",
+        "_monitor/process.memory.usage",
+        "_monitor/process.memory.virtual",
+        "_monitor/system.cpu.load_average.15m",
+        "_monitor/system.cpu.load_average.1m",
+        "_monitor/system.cpu.load_average.5m",
+        "_monitor/system.cpu.time",
+        "_monitor/system.memory.usage",
+        "setup_latency_ms"
+      ]
+    },
+    {
       "id": "24302856669-1--auto",
       "timestamp": "2026-04-12T08:51:48.349Z",
       "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
@@ -267,6 +296,26 @@
       "metrics": [
         "fallback_file_metric",
         "metrics_only_counter"
+      ]
+    },
+    {
+      "id": "canary-24302828573-1--monitor",
+      "timestamp": "2026-04-12T08:50:28.088Z",
+      "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+      "ref": "refs/heads/main",
+      "benchmarks": 2,
+      "metrics": [
+        "_monitor/process.cpu.time",
+        "_monitor/process.disk.io",
+        "_monitor/process.memory.usage",
+        "_monitor/process.memory.virtual",
+        "_monitor/system.cpu.load_average.15m",
+        "_monitor/system.cpu.load_average.1m",
+        "_monitor/system.cpu.load_average.5m",
+        "_monitor/system.cpu.time",
+        "_monitor/system.memory.usage",
+        "setup_latency_ms",
+        "throughput_ops_per_s"
       ]
     },
     {
@@ -636,6 +685,25 @@
       ]
     },
     {
+      "id": "kitchen-24302746788-1--go--monitor",
+      "timestamp": "2026-04-12T08:45:08.222Z",
+      "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
+      "ref": "refs/heads/main",
+      "benchmarks": 2,
+      "metrics": [
+        "_monitor/process.cpu.time",
+        "_monitor/process.disk.io",
+        "_monitor/process.memory.usage",
+        "_monitor/process.memory.virtual",
+        "_monitor/system.cpu.load_average.15m",
+        "_monitor/system.cpu.load_average.1m",
+        "_monitor/system.cpu.load_average.5m",
+        "_monitor/system.cpu.time",
+        "_monitor/system.memory.usage",
+        "kitchen_custom_metric"
+      ]
+    },
+    {
       "id": "kitchen-24302746788-1--rust",
       "timestamp": "2026-04-12T08:45:06.820Z",
       "commit": "f9f770e51aa279e61e248ecf0329b5ca23194bfa",
@@ -682,6 +750,26 @@
       ]
     },
     {
+      "id": "kitchen-24302668714-1--rust--monitor",
+      "timestamp": "2026-04-12T08:40:34.777Z",
+      "commit": "7c117e34f883510abd777e1c00fe912b43178885",
+      "ref": "refs/heads/main",
+      "benchmarks": 1,
+      "metrics": [
+        "kitchen_custom_metric"
+      ]
+    },
+    {
+      "id": "kitchen-24302668714-1--hyperfine--monitor",
+      "timestamp": "2026-04-12T08:40:33.363Z",
+      "commit": "7c117e34f883510abd777e1c00fe912b43178885",
+      "ref": "refs/heads/main",
+      "benchmarks": 1,
+      "metrics": [
+        "kitchen_custom_metric"
+      ]
+    },
+    {
       "id": "canary-24301370517-1--baseline",
       "timestamp": "2026-04-12T07:23:20.669Z",
       "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
@@ -692,6 +780,26 @@
         "bytes_per_op",
         "fallback_file_metric",
         "ns_per_op"
+      ]
+    },
+    {
+      "id": "canary-24301370517-1--monitor",
+      "timestamp": "2026-04-12T07:23:20.350Z",
+      "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+      "ref": "refs/heads/main",
+      "benchmarks": 2,
+      "metrics": [
+        "_monitor/process.cpu.time",
+        "_monitor/process.disk.io",
+        "_monitor/process.memory.usage",
+        "_monitor/process.memory.virtual",
+        "_monitor/system.cpu.load_average.15m",
+        "_monitor/system.cpu.load_average.1m",
+        "_monitor/system.cpu.load_average.5m",
+        "_monitor/system.cpu.time",
+        "_monitor/system.memory.usage",
+        "setup_latency_ms",
+        "throughput_ops_per_s"
       ]
     },
     {
@@ -1242,10 +1350,20 @@
     }
   ],
   "metrics": [
+    "_monitor/process.cpu.time",
+    "_monitor/process.disk.io",
+    "_monitor/process.memory.usage",
+    "_monitor/process.memory.virtual",
+    "_monitor/system.cpu.load_average.15m",
+    "_monitor/system.cpu.load_average.1m",
+    "_monitor/system.cpu.load_average.5m",
+    "_monitor/system.cpu.time",
+    "_monitor/system.memory.usage",
     "allocs_per_op",
     "bytes_per_op",
     "fallback_file_metric",
     "forks",
+    "kitchen_custom_metric",
     "kitchen_direct_metric",
     "lang_bytes_html",
     "lang_bytes_typescript",
@@ -1254,14 +1372,17 @@
     "median",
     "metrics_only_counter",
     "min",
+    "monitor_story_score",
     "ns_per_iter",
     "ns_per_op",
     "open_issues",
     "open_prs",
     "ops",
     "rounds",
+    "setup_latency_ms",
     "stars",
     "stddev",
+    "throughput_ops_per_s",
     "value",
     "workflow_success_pct"
   ]

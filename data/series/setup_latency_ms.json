@@ -1,0 +1,36 @@
+{
+  "metric": "setup_latency_ms",
+  "unit": "ms",
+  "direction": "smaller_is_better",
+  "series": {
+    "canary-flow [phase=setup]": {
+      "tags": {
+        "phase": "setup"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 44,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 44,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor"
+        }
+      ]
+    },
+    "monitor-e2e": {
+      "points": [
+        {
+          "timestamp": "2026-04-12T08:52:10.474Z",
+          "value": 42,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "monitor-24302867178-1"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "metric": "throughput_ops_per_s",
+  "unit": "ops/s",
+  "direction": "bigger_is_better",
+  "series": {
+    "canary-flow [phase=steady-state]": {
+      "tags": {
+        "phase": "steady-state"
+      },
+      "points": [
+        {
+          "timestamp": "2026-04-12T07:23:20.350Z",
+          "value": 8123,
+          "commit": "b017f284a2ea765d06092463076a9c6958ec789b",
+          "run_id": "canary-24301370517-1--monitor"
+        },
+        {
+          "timestamp": "2026-04-12T08:50:28.088Z",
+          "value": 8123,
+          "commit": "0943edcd066ac2a92decab7af0c2c32386b1e252",
+          "run_id": "canary-24302828573-1--monitor"
+        }
+      ]
+    }
+  }
+}
