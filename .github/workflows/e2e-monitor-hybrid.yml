@@ -2,101 +2,164 @@ name: e2e-monitor-hybrid
 
 on:
   workflow_dispatch:
+    inputs:
+      o11ykit-ref:
+        description: "Ref from strawgate/o11ykit to test (branch, tag, or SHA)"
+        required: false
+        default: "codex/aggregate-sidecar-ingest"
+        type: string
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: bench-data-write-serialized
   cancel-in-progress: false
 
 jobs:
-  monitor-capture:
+  capture-monitor-sidecar:
     runs-on: ubuntu-latest
     outputs:
-      monitor_run_id: ${{ steps.ids.outputs.monitor_run_id }}
+      run_id: ${{ steps.ids.outputs.run_id }}
     steps:
-      - name: Checkout
+      - name: Checkout playground
         uses: actions/checkout@v6
         with:
           persist-credentials: false
 
-      - name: Compute run ids
+      - name: Checkout o11ykit ref
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          repository: strawgate/o11ykit
+          ref: ${{ inputs.o11ykit-ref }}
+          path: .o11ykit
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Build local monitor actions
+        working-directory: .o11ykit/octo11y
+        run: |
+          npm ci
+          npm run build -w packages/core
+          npm run build -w packages/format
+          npm run build -w actions/actions-common
+          npm run build -w actions/monitor
+          npm run build -w actions/emit-metric
+
+      - name: Compute run id
         id: ids
         run: |
-          echo "monitor_run_id=monitor-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_OUTPUT"
-          echo "bench_run_id=bench-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}--monitor" >> "$GITHUB_OUTPUT"
+          echo "run_id=monitor-only-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_OUTPUT"
 
       - name: Start monitor
         id: monitor
-        uses: strawgate/o11ykit/octo11y/actions/monitor@main-dist
+        uses: ./.o11ykit/octo11y/actions/monitor
         with:
+          profile: ci
           scrape-interval: 2s
           metric-sets: cpu,memory,load,process
-          run-id: ${{ steps.ids.outputs.monitor_run_id }}
+          run-id: ${{ steps.ids.outputs.run_id }}
           github-token: ${{ github.token }}
 
-      - name: Emit custom metric
-        uses: strawgate/o11ykit/octo11y/actions/emit-metric@main-dist
+      - name: Emit benchmark-style custom metric over OTLP
+        uses: ./.o11ykit/octo11y/actions/emit-metric
         with:
           otlp-http-endpoint: ${{ steps.monitor.outputs.otlp-http-endpoint }}
-          name: setup_latency_ms
-          value: 42
-          unit: ms
-          scenario: monitor-e2e
-          series: baseline
+          name: monitor_story_score
+          value: 73
+          unit: points
+          scenario: playground-monitor
+          series: monitor-only
+          direction: bigger_is_better
+          role: outcome
 
-      - name: Run workload and capture benchmark file
+      - name: Run synthetic workload
         run: |
           python - <<'PY'
           total = 0
-          for i in range(4_000_000):
-              total += i % 7
+          for i in range(3_000_000):
+              total += (i * 7) % 11
           print("workload checksum", total)
           PY
 
-          cat > bench.txt <<'BENCH'
-          goos: linux
-          goarch: amd64
-          cpu: synthetic
-          BenchmarkMonitor/path-a-8   1000000  2200 ns/op  96 B/op  3 allocs/op
-          BENCH
-
-      - name: Stash benchmark file
-        uses: strawgate/o11ykit/octo11y/actions/parse-results@main-dist
-        with:
-          mode: file
-          results: bench.txt
-          format: go
-          run-id: ${{ steps.ids.outputs.bench_run_id }}
-          github-token: ${{ github.token }}
-
-      - name: Aggregate
-        uses: strawgate/o11ykit/octo11y/actions/aggregate@main-dist
-        with:
-          github-token: ${{ github.token }}
-
-  verify-telemetry-sidecar:
+  aggregate-and-verify:
     runs-on: ubuntu-latest
-    needs: monitor-capture
-    permissions:
-      contents: read
+    needs: capture-monitor-sidecar
     steps:
-      - name: Checkout
+      - name: Checkout playground
         uses: actions/checkout@v6
         with:
           persist-credentials: false
 
-      - name: Verify monitor sidecar exists on bench-data
+      - name: Checkout o11ykit ref
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          repository: strawgate/o11ykit
+          ref: ${{ inputs.o11ykit-ref }}
+          path: .o11ykit
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Build local aggregate action
+        working-directory: .o11ykit/octo11y
+        run: |
+          npm ci
+          npm run build -w packages/core
+          npm run build -w packages/format
+          npm run build -w actions/actions-common
+          npm run build -w actions/aggregate
+
+      - name: Aggregate bench-data
+        uses: ./.o11ykit/octo11y/actions/aggregate
+        with:
+          github-token: ${{ github.token }}
+
+      - name: Verify sidecar and aggregate visibility
+        env:
+          RUN_ID: ${{ needs.capture-monitor-sidecar.outputs.run_id }}
         run: |
           set -euo pipefail
+
           git fetch origin bench-data:bench-data
-          EXPECTED_NEW="data/runs/${{ needs.monitor-capture.outputs.monitor_run_id }}/telemetry.otlp.jsonl.gz"
-          EXPECTED_OLD="data/telemetry/${{ needs.monitor-capture.outputs.monitor_run_id }}.otlp.jsonl.gz"
-          echo "Expecting new path: ${EXPECTED_NEW}"
-          echo "Expecting old path: ${EXPECTED_OLD}"
-          if git ls-tree -r --name-only bench-data | grep -Fx "${EXPECTED_NEW}"; then
-            echo "Found run-scoped telemetry sidecar."
-            exit 0
-          fi
-          git ls-tree -r --name-only bench-data | grep -Fx "${EXPECTED_OLD}"
+
+          SIDE="data/runs/${RUN_ID}/telemetry.otlp.jsonl.gz"
+          echo "checking ${SIDE}"
+          git ls-tree -r --name-only bench-data | grep -Fx "${SIDE}"
+
+          git show bench-data:data/index.json > index.json
+          node -e '
+            const fs = require("node:fs");
+            const runId = process.env.RUN_ID;
+            const index = JSON.parse(fs.readFileSync("index.json", "utf8"));
+            const run = index.runs.find((entry) => entry.id === runId);
+            if (!run) {
+              throw new Error(`run ${runId} not found in data/index.json`);
+            }
+            const monitorMetrics = (run.metrics || []).filter((name) => String(name).startsWith("_monitor/"));
+            if (monitorMetrics.length === 0) {
+              throw new Error(`run ${runId} has no _monitor/ metrics in index`);
+            }
+            console.log(`run ${runId} monitor metric count: ${monitorMetrics.length}`);
+            console.log(`sample metrics: ${monitorMetrics.slice(0, 8).join(", ")}`);
+          '
+
+      - name: Ergonomics summary
+        run: |
+          {
+            echo "## Monitor-Only Ergonomics Trial"
+            echo ""
+            echo "- Setup path: monitor + optional emit-metric + aggregate"
+            echo "- No parse/stash step required for sidecar visibility"
+            echo "- No jitter/backoff glue required in workflow"
+            echo ""
+            echo "This run validated that monitor sidecar data is visible to aggregate/index views."
+          } >> "$GITHUB_STEP_SUMMARY"
