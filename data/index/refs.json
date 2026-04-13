@@ -2,22 +2,22 @@
   {
     "ref": "refs/heads/codex/playground-no-cancel-e2e",
     "latestRunId": "bench-24293522265-1--monitor",
-    "latestTimestamp": "2026-04-13T00:02:07.947Z",
+    "latestTimestamp": "2026-04-13T00:05:14.237Z",
     "latestCommit": "56d974be4b76f83ff0dcaa30893edd80fa7aba39",
     "runCount": 31
   },
   {
     "ref": "refs/heads/main",
     "latestRunId": "bench-24291818442-1--monitor",
-    "latestTimestamp": "2026-04-13T00:02:07.946Z",
+    "latestTimestamp": "2026-04-13T00:05:14.236Z",
     "latestCommit": "77425d344e7b329539ef1417ebd4234bed227c9a",
     "runCount": 79
   },
   {
     "ref": "refs/heads/codex/monitor-sidecar-ergonomics",
-    "latestRunId": "monitor-only-24319589136-1",
-    "latestTimestamp": "2026-04-13T00:01:40.502Z",
-    "latestCommit": "c89e64b51063e716f538422d015e6e24947aea18",
-    "runCount": 1
+    "latestRunId": "monitor-only-24319647046-1",
+    "latestTimestamp": "2026-04-13T00:04:35.155Z",
+    "latestCommit": "2a34c9f9ab36783bfca0c655ccd7cbda0cf578c7",
+    "runCount": 2
   }
 ]
