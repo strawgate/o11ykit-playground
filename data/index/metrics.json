@@ -2,56 +2,56 @@
   {
     "metric": "_monitor/process.cpu.time",
     "latestSeriesCount": 3,
-    "latestRunId": "monitor-only-24319647046-1",
-    "latestTimestamp": "2026-04-13T00:04:35.155Z"
+    "latestRunId": "monitor-only-24319917590-1",
+    "latestTimestamp": "2026-04-13T00:17:01.683Z"
   },
   {
     "metric": "_monitor/process.disk.io",
     "latestSeriesCount": 2,
-    "latestRunId": "monitor-only-24319647046-1",
-    "latestTimestamp": "2026-04-13T00:04:35.155Z"
+    "latestRunId": "monitor-only-24319917590-1",
+    "latestTimestamp": "2026-04-13T00:17:01.683Z"
   },
   {
     "metric": "_monitor/process.memory.usage",
     "latestSeriesCount": 1,
-    "latestRunId": "monitor-only-24319647046-1",
-    "latestTimestamp": "2026-04-13T00:04:35.155Z"
+    "latestRunId": "monitor-only-24319917590-1",
+    "latestTimestamp": "2026-04-13T00:17:01.683Z"
   },
   {
     "metric": "_monitor/process.memory.virtual",
     "latestSeriesCount": 1,
-    "latestRunId": "monitor-only-24319647046-1",
-    "latestTimestamp": "2026-04-13T00:04:35.155Z"
+    "latestRunId": "monitor-only-24319917590-1",
+    "latestTimestamp": "2026-04-13T00:17:01.683Z"
   },
   {
     "metric": "_monitor/system.cpu.load_average.15m",
     "latestSeriesCount": 1,
-    "latestRunId": "monitor-only-24319647046-1",
-    "latestTimestamp": "2026-04-13T00:04:35.155Z"
+    "latestRunId": "monitor-only-24319917590-1",
+    "latestTimestamp": "2026-04-13T00:17:01.683Z"
   },
   {
     "metric": "_monitor/system.cpu.load_average.1m",
     "latestSeriesCount": 1,
-    "latestRunId": "monitor-only-24319647046-1",
-    "latestTimestamp": "2026-04-13T00:04:35.155Z"
+    "latestRunId": "monitor-only-24319917590-1",
+    "latestTimestamp": "2026-04-13T00:17:01.683Z"
   },
   {
     "metric": "_monitor/system.cpu.load_average.5m",
     "latestSeriesCount": 1,
-    "latestRunId": "monitor-only-24319647046-1",
-    "latestTimestamp": "2026-04-13T00:04:35.155Z"
+    "latestRunId": "monitor-only-24319917590-1",
+    "latestTimestamp": "2026-04-13T00:17:01.683Z"
   },
   {
     "metric": "_monitor/system.cpu.time",
     "latestSeriesCount": 32,
-    "latestRunId": "monitor-only-24319647046-1",
-    "latestTimestamp": "2026-04-13T00:04:35.155Z"
+    "latestRunId": "monitor-only-24319917590-1",
+    "latestTimestamp": "2026-04-13T00:17:01.683Z"
   },
   {
     "metric": "_monitor/system.memory.usage",
     "latestSeriesCount": 6,
-    "latestRunId": "monitor-only-24319647046-1",
-    "latestTimestamp": "2026-04-13T00:04:35.155Z"
+    "latestRunId": "monitor-only-24319917590-1",
+    "latestTimestamp": "2026-04-13T00:17:01.683Z"
   },
   {
     "metric": "allocs_per_op",
@@ -134,8 +134,8 @@
   {
     "metric": "monitor_story_score",
     "latestSeriesCount": 1,
-    "latestRunId": "monitor-only-24319647046-1",
-    "latestTimestamp": "2026-04-13T00:04:35.155Z"
+    "latestRunId": "monitor-only-24319917590-1",
+    "latestTimestamp": "2026-04-13T00:17:01.683Z"
   },
   {
     "metric": "ns_per_iter",

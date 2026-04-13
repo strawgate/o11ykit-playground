@@ -41,6 +41,13 @@
           "commit": "2a34c9f9ab36783bfca0c655ccd7cbda0cf578c7",
           "run_id": "monitor-only-24319647046-1",
           "range": 2.99
+        },
+        {
+          "timestamp": "2026-04-13T00:17:01.683Z",
+          "value": 1.11,
+          "commit": "2daeded074cbe6da91a7808a43fecab4815e449b",
+          "run_id": "monitor-only-24319917590-1",
+          "range": 2.65
         }
       ]
     },
@@ -83,6 +90,13 @@
           "commit": "2a34c9f9ab36783bfca0c655ccd7cbda0cf578c7",
           "run_id": "monitor-only-24319647046-1",
           "range": 0.29
+        },
+        {
+          "timestamp": "2026-04-13T00:17:01.683Z",
+          "value": 0.19,
+          "commit": "2daeded074cbe6da91a7808a43fecab4815e449b",
+          "run_id": "monitor-only-24319917590-1",
+          "range": 0.26
         }
       ]
     },
@@ -124,6 +138,13 @@
           "value": 0,
           "commit": "2a34c9f9ab36783bfca0c655ccd7cbda0cf578c7",
           "run_id": "monitor-only-24319647046-1",
+          "range": 0
+        },
+        {
+          "timestamp": "2026-04-13T00:17:01.683Z",
+          "value": 0,
+          "commit": "2daeded074cbe6da91a7808a43fecab4815e449b",
+          "run_id": "monitor-only-24319917590-1",
           "range": 0
         }
       ]
